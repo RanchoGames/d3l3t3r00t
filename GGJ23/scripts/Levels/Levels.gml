@@ -90,7 +90,7 @@ function make_levels() {
 	global.lvl3_things = ds_map_create();
 	
 	add_thing(global.lvl3_things,objFolder,1,1,[0,2,1,1]);	
-	add_thing(global.lvl3_things,objFolder,3,0,[1,99,1,1]);
+	add_thing(global.lvl3_things,objFolder,3,0,[1,20  ,1,1]);
 	add_thing(global.lvl3_things,objFolder,4,2,[1,5,4,3]);
 	add_thing(global.lvl3_things,objFolder,2,3,[1,4,1,1]);
 	add_thing(global.lvl3_things,objBlock,0,2);
@@ -169,7 +169,7 @@ function make_levels() {
 	
 	add_thing(global.lvl8_things,objFolder,3,3,[1,7,5,1]);
 	add_thing(global.lvl8_things,objFolder,1,1,[0,9,4,0]);
-	//add_thing(global.lvl8_things,objBlock,1,1);
+	add_thing(global.lvl8_things,objBlock,0,0);
 
 	var xx = 14;
 	var yy = 5;
@@ -184,10 +184,9 @@ function make_levels() {
 	
 	add_thing(global.lvl9_things,objFolder,4,0,[1,8,1,1]);
 	add_thing(global.lvl9_things,objFolder,0,3,[0,10,1,1]);
-	add_thing(global.lvl9_things,objFolder,3,4,[1,98,0,0]);
+	add_thing(global.lvl9_things,objFolder,3,4,[1,23,0,0]);
 	add_thing(global.lvl9_things,objBlock,0,0);
 	add_thing(global.lvl9_things,objBlock,2,1);
-	add_thing(global.lvl9_things,objPowerup,3,2);
 
 	var xx = 4;
 	var yy = 8;
@@ -201,9 +200,9 @@ function make_levels() {
 	global.lvl10_things = ds_map_create();
 	
 	add_thing(global.lvl10_things,objFolder,1,1,[1,9,0,3]);
-	add_thing(global.lvl10_things,objFolder,3,3,[1,11,0,1]);
+	add_thing(global.lvl10_things,objFolder,3,3,[1,11,1,0]);
 	add_thing(global.lvl10_things,objFolder,10,3,[1,17,3,0]);
-	add_thing(global.lvl10_things,objFolder,11,1,[0,97,0,3]);
+	add_thing(global.lvl10_things,objFolder,11,1,[0,18,3,2]);
 	add_thing(global.lvl10_things,objBlock,4,0);
 	add_thing(global.lvl10_things,objBlock,0,3);
 	add_thing(global.lvl10_things,objBlock,6,3);
@@ -239,7 +238,7 @@ function make_levels() {
 	// -- Level 12
 	global.lvl12_things = ds_map_create();
 	
-	add_thing(global.lvl12_things,objFolder,0,0,[0,11,3,3]);
+	add_thing(global.lvl12_things,objFolder,6,0,[0,11,0,1]);
 	add_thing(global.lvl12_things,objFolder,1,1,[1,13,0,0]);
 
 	var xx = 4;
@@ -247,57 +246,57 @@ function make_levels() {
 	var ww = 7;
 	var hh = 2;
 
-	add_level(12,"Folder 12", xx, yy, xx+ww, yy+hh, global.lvl12_things);
+	add_level(12,"Math", xx, yy, xx+ww, yy+hh, global.lvl12_things);
 	// -- End Level 12
 	
 	// -- Level 13
 	global.lvl13_things = ds_map_create();
 	
 	add_thing(global.lvl13_things,objFolder,0,0,[0,12,1,1]);
-	add_thing(global.lvl13_things,objFolder,2,1,[0,14,2,0]);
+	add_thing(global.lvl13_things,objFolder,2,0,[1,14,0,0]);
 
 	var xx = 4;
 	var yy = 8;
 	var ww = 3;
 	var hh = 2;
 
-	add_level(13,"Folder 13", xx, yy, xx+ww, yy+hh, global.lvl13_things);
+	add_level(13,"Algebra", xx, yy, xx+ww, yy+hh, global.lvl13_things);
 	// -- End Level 13
 		
 	// -- Level 14
 	global.lvl14_things = ds_map_create();
 	
-	add_thing(global.lvl14_things,objFolder,0,0,[0,15,3,0]);
-	add_thing(global.lvl14_things,objFolder,2,0,[0,13,2,1]);
+	add_thing(global.lvl14_things,objFolder,0,0,[0,13,2,0]);
+	add_thing(global.lvl14_things,objFolder,2,0,[1,15,3,0]);
 
 	var xx = 4;
 	var yy = 8;
 	var ww = 3;
 	var hh = 1;
 
-	add_level(14,"Folder 14", xx, yy, xx+ww, yy+hh, global.lvl14_things);
+	add_level(14,"??? 14", xx, yy, xx+ww, yy+hh, global.lvl14_things);
 	// -- End Level 14
 	
 	// -- Level 15
 	global.lvl15_things = ds_map_create();
 	
-	add_thing(global.lvl15_things,objFolder,3,0,[0,14,3,0]);
-	add_thing(global.lvl15_things,objBlock,0,0);
-	add_thing(global.lvl15_things,objBlock,1,0);
+	add_thing(global.lvl15_things,objFolder,3,0,[0,14,2,0]);
+	//add_thing(global.lvl15_things,objBlock,0,0);
+	//add_thing(global.lvl15_things,objBlock,1,0);
 
 	var xx = 4;
 	var yy = 8;
 	var ww = 7;
 	var hh = 4;
 
-	add_level(15,"Folder 15", xx, yy, xx+ww, yy+hh, global.lvl15_things);
+	add_level(15,"cal culus", xx, yy, xx+ww, yy+hh, global.lvl15_things);
 	// -- End Level 15
 	
 	// -- Level 16
 	global.lvl16_things = ds_map_create();
 	
 	add_thing(global.lvl16_things,objFolder,2,2,[1,11,2,3]);
-	add_thing(global.lvl16_things,objFolder,3,0,[2,17,0,0]);
+	add_thing(global.lvl16_things,objFolder,3,0,[2,17,1,3]);
 	add_thing(global.lvl16_things,objBlock,1,1);
 	add_thing(global.lvl16_things,objBlock,2,1);
 	add_thing(global.lvl16_things,objBlock,3,1);
@@ -309,6 +308,223 @@ function make_levels() {
 
 	add_level(16,"Folder 16", xx, yy, xx+ww, yy+hh, global.lvl16_things);
 	// -- End Level 16
+	
+	// -- Level 17
+	global.lvl17_things = ds_map_create();
+	
+	add_thing(global.lvl17_things,objFolder,3,0,[0,10,10,3]);
+
+	var xx = 4;
+	var yy = 8;
+	var ww = 5;
+	var hh = 4;
+
+	add_level(17,"Folder 17", xx, yy, xx+ww, yy+hh, global.lvl17_things);
+	// -- End Level 17
+	
+	// -- Level 18
+	global.lvl18_things = ds_map_create();
+	
+	add_thing(global.lvl18_things,objFolder,0,1,[0,19,0,4]);
+	add_thing(global.lvl18_things,objFolder,3,2,[1,10,11,1]);
+	add_thing(global.lvl18_things,objPowerup,1,3);
+	add_thing(global.lvl18_things,objBlock,2,0);	
+
+	var xx = 4;
+	var yy = 8;
+	var ww = 5;
+	var hh = 4;
+
+	add_level(18,"Folder 18", xx, yy, xx+ww, yy+hh, global.lvl18_things);
+	// -- End Level 18
+	
+	// -- Level 19
+	global.lvl19_things = ds_map_create();
+	
+	add_thing(global.lvl19_things,objFolder,0,4,[1,18,3,0]);
+	add_thing(global.lvl19_things,objFolder,4,1,[0,20,6,5]);
+	add_thing(global.lvl19_things,objPowerup,0,1);
+	add_thing(global.lvl19_things,objBlock,1,3);	
+	add_thing(global.lvl19_things,objBlock,2,2);
+	add_thing(global.lvl19_things,objBlock,4,4);
+
+	var xx = 4;
+	var yy = 8;
+	var ww = 5;
+	var hh = 5;
+
+	add_level(19,"Folder 19", xx, yy, xx+ww, yy+hh, global.lvl19_things);
+	// -- End Level 19
+	
+	// -- Level 20
+	global.lvl20_things = ds_map_create();
+	
+	add_thing(global.lvl20_things,objFolder,1,1,[1,3,3,0]);
+	add_thing(global.lvl20_things,objFolder,6,5,[1,19,4,1]);
+	add_thing(global.lvl20_things,objFolder,4,6,[2,21,5,2]);
+	add_thing(global.lvl20_things,objFolder,8,6,[2,25,1,2]);
+	add_thing(global.lvl20_things,objC,6,0);
+	add_thing(global.lvl20_things,objDoor,6,1,[0,0]);
+	add_thing(global.lvl20_things,objDoor,6,2,[0,1]);	
+	add_thing(global.lvl20_things,objBlock,5,0);
+	add_thing(global.lvl20_things,objBlock,5,1);
+	add_thing(global.lvl20_things,objBlock,5,2);
+	add_thing(global.lvl20_things,objBlock,7,0);
+	add_thing(global.lvl20_things,objBlock,7,1);
+	add_thing(global.lvl20_things,objBlock,7,2);
+	add_thing(global.lvl20_things,objBlock,0,2);
+	add_thing(global.lvl20_things,objBlock,1,2);
+	add_thing(global.lvl20_things,objBlock,2,1);
+	add_thing(global.lvl20_things,objBlock,3,0);
+
+	var xx = 9;
+	var yy = 2;
+	var ww = 13;
+	var hh = 8;
+
+	add_level(20,"This PC", xx, yy, xx+ww, yy+hh, global.lvl20_things);
+	// -- End Level 20
+	
+	// -- Level 21
+	global.lvl21_things = ds_map_create();
+	
+	add_thing(global.lvl21_things,objFolder,0,1,[0,22,0,2]);
+	add_thing(global.lvl21_things,objBlock,4,1);
+	add_thing(global.lvl21_things,objBlock,4,2);
+	add_thing(global.lvl21_things,objBlock,2,0);
+	add_thing(global.lvl21_things,objBlock,2,2);
+	add_thing(global.lvl21_things,objPowerup,4,0);
+	
+	var xx = 9;
+	var yy = 2;
+	var ww = 7;
+	var hh = 4;
+
+	add_level(21,"Folder 21", xx, yy, xx+ww, yy+hh, global.lvl21_things);
+	// -- End Level 21
+	
+	// -- Level 22
+	global.lvl22_things = ds_map_create();
+	
+	add_thing(global.lvl22_things,objFolder,0,2,[1,21,0,1]);
+	add_thing(global.lvl22_things,objFolder,0,4,[0,23,3,3]);
+	add_thing(global.lvl22_things,objPowerup,2,0);
+	add_thing(global.lvl22_things,objPowerup,2,4);
+	add_thing(global.lvl22_things,objPowerup,1,6);
+	add_thing(global.lvl22_things,objBlock,1,1);
+	add_thing(global.lvl22_things,objBlock,1,2);
+	add_thing(global.lvl22_things,objBlock,0,3);
+	add_thing(global.lvl22_things,objBlock,1,3);
+	add_thing(global.lvl22_things,objBlock,1,4);
+	add_thing(global.lvl22_things,objBlock,1,5);
+	
+	var xx = 9;
+	var yy = 2;
+	var ww = 3;
+	var hh = 7;
+
+	add_level(22,"Folder 22", xx, yy, xx+ww, yy+hh, global.lvl22_things);
+	// -- End Level 22
+	
+	// -- Level 23
+	global.lvl23_things = ds_map_create();
+	
+	add_thing(global.lvl23_things,objFolder,0,0,[0,9,3,4]);
+	add_thing(global.lvl23_things,objFolder,3,3,[1,22,0,4]);
+	add_thing(global.lvl23_things,objFolder,6,2,[1,24,0,1]);
+	add_thing(global.lvl23_things,objBlock,1,3);
+	add_thing(global.lvl23_things,objBlock,2,2);
+	add_thing(global.lvl23_things,objBlock,3,1);
+	add_thing(global.lvl23_things,objBlock,4,2);
+	add_thing(global.lvl23_things,objBlock,5,0);
+	add_thing(global.lvl23_things,objBlock,5,1);
+	add_thing(global.lvl23_things,objBlock,6,0);
+	
+	var xx = 4;
+	var yy = 8;
+	var ww = 8;
+	var hh = 4;
+
+	add_level(23,"Folder 23", xx, yy, xx+ww, yy+hh, global.lvl23_things);
+	// -- End Level 23
+	
+	// -- Level 24
+	global.lvl24_things = ds_map_create();
+	
+	add_thing(global.lvl24_things,objFolder,0,1,[0,23,0,1]);
+	add_thing(global.lvl24_things,objKey,2,1,[0,0]);
+	add_thing(global.lvl24_things,objFolder,4,1,[2,20,6,4]);
+
+	var xx = 4;
+	var yy = 8;
+	var ww = 5;
+	var hh = 3;
+
+	add_level(24,"Folder 24", xx, yy, xx+ww, yy+hh, global.lvl24_things);
+	// -- End Level 24
+	
+	// -- Level 25
+	global.lvl25_things = ds_map_create();
+	
+	add_thing(global.lvl25_things,objFolder,0,7,[2,26,1,7]);
+	add_thing(global.lvl25_things,objBlock,1,3);
+	add_thing(global.lvl25_things,objBlock,0,6);
+	add_thing(global.lvl25_things,objPowerup,0,1);
+	add_thing(global.lvl25_things,objPowerup,1,5);
+
+	var xx = 4;
+	var yy = 8;
+	var ww = 2;
+	var hh = 8;
+
+	add_level(25,"Folder 25", xx, yy, xx+ww, yy+hh, global.lvl25_things);
+	// -- End Level 25
+	
+	// -- Level 26
+	global.lvl26_things = ds_map_create();
+	
+	add_thing(global.lvl26_things,objFolder,6,0,[0,27,4,1]);
+	add_thing(global.lvl26_things,objPowerup,0,5);
+	add_thing(global.lvl26_things,objPowerup,2,1);
+	add_thing(global.lvl26_things,objPowerup,3,4);
+	add_thing(global.lvl26_things,objPowerup,4,7);
+	add_thing(global.lvl26_things,objPowerup,7,5);
+	add_thing(global.lvl26_things,objPowerup,9,2);
+	add_thing(global.lvl26_things,objBlock,0,0);
+	add_thing(global.lvl26_things,objBlock,3,0);
+	add_thing(global.lvl26_things,objBlock,4,1);
+	add_thing(global.lvl26_things,objBlock,7,1);
+	add_thing(global.lvl26_things,objBlock,5,3);
+	add_thing(global.lvl26_things,objBlock,8,3);
+	add_thing(global.lvl26_things,objBlock,4,4);
+	add_thing(global.lvl26_things,objBlock,5,4);
+	add_thing(global.lvl26_things,objBlock,4,5);
+	add_thing(global.lvl26_things,objBlock,3,7);
+	add_thing(global.lvl26_things,objBlock,9,5);
+	
+
+	var xx = 12;
+	var yy = 2;
+	var ww = 10;
+	var hh = 8;
+
+	add_level(26,"Folder 26", xx, yy, xx+ww, yy+hh, global.lvl26_things);
+	// -- End Level 26
+	
+	// -- Level 27
+	global.lvl27_things = ds_map_create();
+	
+	add_thing(global.lvl27_things,objFolder,4,1,[0,26,0,6]);
+	add_thing(global.lvl27_things,objKey,2,1,[0,1]);
+	add_thing(global.lvl27_things,objFolder,0,1,[2,20,6,4]);
+	
+	var xx = 4;
+	var yy = 8;
+	var ww = 5;
+	var hh = 3;
+
+	add_level(27,"Folder 27", xx, yy, xx+ww, yy+hh, global.lvl27_things);
+	// -- End Level 27
 	
 	
 	// Update total levels
