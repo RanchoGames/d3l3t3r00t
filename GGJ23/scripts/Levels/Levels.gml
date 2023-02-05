@@ -57,7 +57,7 @@ function make_levels() {
 	// -- Level 1
 	global.lvl1_things = ds_map_create();
 	
-	add_thing(global.lvl1_things,objFolder,1,1,[choose(4,5,6,7,8,9,10),0,2,1]);	
+	add_thing(global.lvl1_things,objFolder,1,1,[3,0,2,1]);	
 	add_thing(global.lvl1_things,objBlock,1,3);
 	add_thing(global.lvl1_things,objFolder,3,2,[choose(4,5,6,7,8,9,10),2,0,7]);
 	//add_thing(global.lvl1_things,objKey,2,2,[0,1]);
