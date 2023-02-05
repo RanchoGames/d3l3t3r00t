@@ -6,3 +6,5 @@ dots = 0;
 dots_total = 3;
 dots_timer = 0;
 dots_timer_total = 10;
+
+glass = 0;

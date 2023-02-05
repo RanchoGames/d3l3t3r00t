@@ -6,3 +6,6 @@ if (dots_timer >= dots_timer_total) {
 	dots++;
 	if (dots>dots_total) { dots=0; }
 }
+
+glass+=4;
+if (glass>359) { glass = 0; }

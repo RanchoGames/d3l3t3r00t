@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Draw antivirus
 
 window_draw_background();
 
@@ -31,6 +30,15 @@ window_draw_background();
 	var stepsDone = STTOTAL - ST;
 	draw_text(antivirus_x+49,antivirus_y+27,string(stepsDone)+" of "+string(STTOTAL)+" completed.");
 	draw_set_color(c_white);
+	
+	// - Maginyfing glass
+	var mg_x = lengthdir_x(3,glass);
+	var mg_y = lengthdir_y(3,glass);
+	
+	draw_sprite(sprGlass,0,antivirus_x+204+mg_x,antivirus_y+12+mg_y);
+	
+	// - Abira
+	draw_sprite(sprAbira,0,antivirus_x+12,antivirus_y+12);
 //}
 
 

@@ -192,6 +192,11 @@ function level_start(level) {
 					new_obj.tipo	= piece.data[0];
 					new_obj.mykey	= piece.data[1];
 				break;
+				
+				// -- Block
+				case objBlock:
+					new_obj.tipo	= piece.data;
+				break;
 			}
 		}
 	}
