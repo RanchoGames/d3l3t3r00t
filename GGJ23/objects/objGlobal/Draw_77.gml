@@ -1,8 +1,9 @@
 draw_surface_ext(application_surface,8*WINDOW_SCALE,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
 draw_set_color(global.bgcolor);
 draw_set_alpha(1);
-draw_rectangle(0,0,8 * WINDOW_SCALE,room_height*WINDOW_SCALE-13,0);
+//draw_rectangle(0,0,8 * WINDOW_SCALE,room_height*WINDOW_SCALE-13,0)
 draw_set_color(c_white);
+draw_sprite_ext(sprClouds,1,0,0,2,2,0,c_white,1);
 
 draw_sprite_ext(sprBar,0,0,(room_height-13)*WINDOW_SCALE,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
 

@@ -32,6 +32,7 @@
     {"name":"objFolder","order":1,"path":"objects/objFolder/objFolder.yy",},
     {"name":"sprImg_Ted","order":1,"path":"sprites/sprImg_Ted/sprImg_Ted.yy",},
     {"name":"sprTXT","order":6,"path":"sprites/sprTXT/sprTXT.yy",},
+    {"name":"sprClouds","order":8,"path":"sprites/sprClouds/sprClouds.yy",},
     {"name":"WindowSystem","order":1,"path":"scripts/WindowSystem/WindowSystem.yy",},
   ],
 }
