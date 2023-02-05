@@ -1,1 +1,1 @@
-//image_index = floor(random(image_number));
+tipo = 0;

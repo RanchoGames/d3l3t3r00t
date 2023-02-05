@@ -22,8 +22,12 @@ global.lvl_antivirus = 7;
 global.steps = 6;
 global.steps_total = 6;
 
+global.steps_keys = 0;
+
 #macro ST global.steps
 #macro STTOTAL global.steps_total
+
+#macro STKEYS global.steps_keys
 
 global.starting_x = 0;
 global.starting_y = 0;
@@ -47,6 +51,7 @@ function turn_next(){
 	
 	TU++;
 	TUTIMER = TUTIMERTOTAL;
+	if (myturn) { STKEYS++; }
 	
 	if (TU>TUTOTAL) { TU=0; }
 }
@@ -80,6 +85,7 @@ function turn_step() {
 		}
 		
 		if ((ST==0 && overFolder==0) or ST<0) {
+			STKEYS = 0;
 			with (objCharacter) {
 				objCharacter.x = global.starting_x;
 				objCharacter.y = global.starting_y;
@@ -89,6 +95,8 @@ function turn_step() {
 				ST = STTOTAL;
 				global.shake_x = 6;
 				global.shake_y = 6;
+				
+				sonar(sndMuerte);
 			}
 		}
 	}

@@ -40,7 +40,7 @@ function make_levels() {
 	// -- Level 0
 	global.lvl0_things = ds_map_create();
 	
-	add_thing(global.lvl0_things,objBlock,1,2);
+	add_thing(global.lvl0_things,objBlock,1,2,1);
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
 	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_Bob,6,3,1,"Bob.jpg"]);
 	//add_thing(global.lvl0_things,objDoor,0,2,[0,1]);

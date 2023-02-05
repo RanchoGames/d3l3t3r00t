@@ -16,5 +16,6 @@ var time = chour + ":" + cminute;
 draw_set_font(fntTitle);
 draw_set_color(make_color_rgb(42,37,43));
 draw_set_alpha(1);
-draw_text_transformed((room_width-28)*WINDOW_SCALE,(room_height-16)*WINDOW_SCALE,time,2,2,0);
+draw_text_transformed(24*WINDOW_SCALE,(room_height-15)*WINDOW_SCALE,"RanchOS",2,2,0);
+draw_text_transformed((room_width-28)*WINDOW_SCALE,(room_height-15)*WINDOW_SCALE,time,2,2,0);
 draw_set_font(fntPixel);

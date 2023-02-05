@@ -65,12 +65,16 @@ function draw_window(x1,y1,x2,y2,wa,tl) {
 	var title = (tl == undefined ? noone : tl);
 	
 	// -- Draw window
-	var masx,masy;
-	masx = (global.shake_x * active_window) * choose(-1,1);
-	masy = (global.shake_y * active_window) * choose(-1,1);
-	draw_sprite(sprWindow,0,x1-GRID_SIZE+masx,y1-GRID_SIZE+masy);
+	var masx,masy,isActive,mySprite,opacity;
+	var isActive = (active_window==1 ? 1 : 0);
+	masx = (global.shake_x * isActive) * choose(-1,1);
+	masy = (global.shake_y * isActive) * choose(-1,1);
+	mySprite = (wa==2 ? sprWindowBack : sprWindow);
+	opacity = (wa==3 ? 1 : 1);
 	
-	if (wa) {
+	draw_sprite_ext(mySprite,0,x1-GRID_SIZE+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+	
+	if (isActive) {
 		draw_sprite(sprWindow,2,x2+masx+1,y1-GRID_SIZE+masy+1);
 		draw_sprite(sprWindow,6,x1-GRID_SIZE+masx+1,y2+masy+1);
 		draw_sprite_ext(sprWindow,8,x2+masx+1,y2+masy+1,1,1,0,c_black,1);
@@ -84,37 +88,48 @@ function draw_window(x1,y1,x2,y2,wa,tl) {
 		}
 	}
 	
-	draw_sprite(sprWindow,2,x2+masx,y1-GRID_SIZE+masy);
-	draw_sprite(sprWindow,6,x1-GRID_SIZE+masx,y2+masy);
-	draw_sprite(sprWindow,8,x2+masx,y2+masy);
+	draw_sprite_ext(mySprite,2,x2+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+	draw_sprite_ext(mySprite,6,x1-GRID_SIZE+masx,y2+masy,1,1,0,c_white,opacity);
+	draw_sprite_ext(mySprite,8,x2+masx,y2+masy,1,1,0,c_white,opacity);
 	
 	for (var i=0; i<size_width; i++) {
-		draw_sprite(sprWindow,1,x1+(i*GRID_SIZE)+masx,y1-GRID_SIZE+masy);
-		draw_sprite(sprWindow,7,x1+(i*GRID_SIZE)+masx,y2+masy);
+		draw_sprite_ext(mySprite,1,x1+(i*GRID_SIZE)+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+		draw_sprite_ext(mySprite,7,x1+(i*GRID_SIZE)+masx,y2+masy,1,1,0,c_white,opacity);
 	}
 	
 	for (var o=0; o<size_height; o++) {
-		draw_sprite(sprWindow,3,x1-GRID_SIZE+masx,y1+(o*GRID_SIZE)+masy);
-		draw_sprite(sprWindow,5,x2+masx,y1+(o*GRID_SIZE)+masy);
+		draw_sprite_ext(mySprite,3,x1-GRID_SIZE+masx,y1+(o*GRID_SIZE)+masy,1,1,0,c_white,opacity);
+		draw_sprite_ext(mySprite,5,x2+masx,y1+(o*GRID_SIZE)+masy,1,1,0,c_white,opacity);
 	}
 	
 	// -- Buttons
-	draw_sprite(sprWindowButtons,0,x2-GRID_SIZE+masx,y1-GRID_SIZE+masy);
-	draw_sprite(sprWindowButtons,1,x2+masx,y1-GRID_SIZE+masy);
+	if (wa!=2) {
+		draw_sprite_ext(sprWindowButtons,0,x2-GRID_SIZE+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+		draw_sprite_ext(sprWindowButtons,1,x2+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+	}
+	else {
+		draw_sprite_ext(sprWindowButtonsBack,0,x2-GRID_SIZE+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+		draw_sprite_ext(sprWindowButtonsBack,1,x2+masx,y1-GRID_SIZE+masy,1,1,0,c_white,opacity);
+	}
 
 	
 	// -- Draw background
-	draw_set_color(c_white);
+	if (wa==2) { draw_set_color(make_color_rgb(213,212,203)); }
+	else { draw_set_color(make_color_rgb(222,221,212)); }
+	draw_set_alpha(opacity);
 	draw_rectangle(x1+masx,y1+masy,x2+masx,y2+masy,0);
+	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
 	
 	// -- Title
 	if (title != noone) {
 		draw_set_font(fntTitle);
-		draw_set_color(make_color_rgb(42,37,43));
-		draw_set_alpha(1);
+		if (wa==2) { draw_set_color(make_color_rgb(120,106,123)); }
+		else { draw_set_color(make_color_rgb(42,37,43)); }
+		draw_set_alpha(opacity);
 		draw_text(x1+masx,y1-18+masy,title);
+		draw_set_alpha(1);
 		draw_set_font(fntPixel);
 	}
 }
@@ -163,7 +178,8 @@ function window_draw_background() {
 					var lvl_y2 = level_get_y2(q);
 					var lvl_title = level_get_name(q);
 			
-					draw_window(lvl_x1,lvl_y1,lvl_x2,lvl_y2,0,lvl_title);
+					draw_window(lvl_x1,lvl_y1,lvl_x2,lvl_y2,2,lvl_title);
+					//draw_window(lvl_x1,lvl_y1,lvl_x2,lvl_y2,3,lvl_title);
 					
 					// -- Things
 					var things = level_get_things(q);
@@ -202,15 +218,21 @@ function window_draw_background() {
 									var mykey		= piece.data[1];
 									should_draw = (global.key[mykey] ? 0 : 1);
 								break;
+								
+								case objBlock:
+									if (piece.data!=undefined) {
+										piece_subimg = piece.data;
+									}
+								break;
 							}
 						}
 						
-						if (piece_object == objBlock) {
+						/*if (piece_object == objBlock) {
 							piece_subimg = choose(0,1,2,3);
-						}
+						}*/
 						
 						if (should_draw) {
-							draw_sprite(piece_sprite,piece_subimg,piece_x,piece_y);
+							draw_sprite_ext(piece_sprite,piece_subimg,piece_x,piece_y,1,1,0,c_white,.5);
 						}
 					}
 					
@@ -220,7 +242,7 @@ function window_draw_background() {
 		global.surface_update = 0;
 	}
 	
-	draw_surface_ext(global.surface_background,0,0,1,1,0,c_white,.5);
+	draw_surface_ext(global.surface_background,0,0,1,1,0,c_white,1);
 	
 	// -- Update shake
 	global.shake_x = lerp(global.shake_x,0,.2);

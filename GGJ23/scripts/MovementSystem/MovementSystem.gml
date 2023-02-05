@@ -53,6 +53,22 @@ function character_moveset(goto_x,goto_y) {
 	if (collision==false && inside) {
 		x = goto_x;
 		y = goto_y;
+		
+		// -- Sound
+		var stepsDone = STKEYS;
+		if (stepsDone<=5) {
+			switch (stepsDone) {
+				case 0: sonar(sndPaso1); break;
+				case 1: sonar(sndPaso2); break;
+				case 2: sonar(sndPaso3); break;
+				case 3: sonar(sndPaso4); break;
+				case 4: sonar(sndPaso5); break;
+				case 5: sonar(sndPaso6); break;
+			}
+		}
+		else {
+			sonar(sndPaso6);
+		}
 				
 		// -- Next turn
 		turn_next();

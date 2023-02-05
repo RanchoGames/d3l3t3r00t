@@ -133,6 +133,8 @@ function level_get_levels() {
 */
 
 function level_start(level) {
+	STKEYS = 0;
+	
 	var things = level_get_things(level);
 	var things_total = ds_map_size(things);
 	var lvl_x = level_get_x1(level) * GRID_SIZE;

@@ -18,3 +18,5 @@ draw_clear_alpha(c_white,1);
 draw_set_font(fntPixel);
 
 depth = -2;
+
+global.sonido = 1;
