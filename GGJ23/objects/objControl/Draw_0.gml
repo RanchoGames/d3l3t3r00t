@@ -4,15 +4,18 @@
 window_draw_background();
 
 // -- Draw antivirus
+if (LVLACTIVE >= global.lvl_antivirus) {
+	var antivirus_x = (room_width/2)-(240/2);
+	var antivirus_y = room_height-64-8;
 
-var antivirus_x = (room_width/2)-(240/2);
-var antivirus_y = room_height-64-8;
+	draw_window(((room_width/2)-(240/2))/GRID_SIZE,(room_height-64-8)/GRID_SIZE,((room_width/2)+(240/2))/GRID_SIZE,((room_height-64)+48-8)/GRID_SIZE,0,"Panda Antivirus");
+	draw_sprite(sprAntivirus,0,antivirus_x,antivirus_y);
 
-draw_window(((room_width/2)-(240/2))/GRID_SIZE,(room_height-64-8)/GRID_SIZE,((room_width/2)+(240/2))/GRID_SIZE,((room_height-64)+48-8)/GRID_SIZE);
-draw_sprite(sprAntivirus,0,antivirus_x,antivirus_y);
-
-for (i=0; i<(STTOTAL-ST); i++) {
-	draw_sprite(sprAntivirus_Bar,0,antivirus_x+49+(i*24),antivirus_y+21);
+	for (i=0; i<(STTOTAL-ST); i++) {
+		if (i<STTOTAL) {
+			draw_sprite(sprAntivirus_Bar,0,antivirus_x+49+(i*24),antivirus_y+21);
+		}
+	}
 }
 
 

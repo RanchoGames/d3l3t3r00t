@@ -152,6 +152,7 @@ function window_draw_background() {
 	
 		//draw_clear_alpha(global.bgcolor,0);
 		surface_set_target(global.surface_background);
+		draw_clear_alpha(c_white,0);
 			for (var q=0; q<global.levels_total; q++) {
 				var o = global.lvl_bg[q];
 				if (o && q!=LVLACTIVE) {
@@ -178,6 +179,7 @@ function window_draw_background() {
 						var piece_x			= lvl_x + (piece.x1 * GRID_SIZE);
 						var piece_y			= lvl_y + (piece.y1 * GRID_SIZE);
 						var piece_sprite	= object_get_sprite(piece.object);
+						var should_draw		= 1;
 						
 						// - If it has special data
 						var piece_subimg	= 0;
@@ -190,6 +192,16 @@ function window_draw_background() {
 								case objTXT:
 									piece_subimg	= piece.data[3];
 								break;
+								
+								case objDoor:
+									var mystep		= piece.data[1];
+									should_draw = (global.keys >= mystep ? 0 : 1);
+								break;
+								
+								case objKey:
+									var mykey		= piece.data[1];
+									should_draw = (global.key[mykey] ? 0 : 1);
+								break;
 							}
 						}
 						
@@ -197,7 +209,9 @@ function window_draw_background() {
 							piece_subimg = choose(0,1,2,3);
 						}
 						
-						draw_sprite(piece_sprite,piece_subimg,piece_x,piece_y);
+						if (should_draw) {
+							draw_sprite(piece_sprite,piece_subimg,piece_x,piece_y);
+						}
 					}
 					
 				}

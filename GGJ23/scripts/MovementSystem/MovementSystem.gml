@@ -20,7 +20,7 @@ global.facing = 1;
 */
 
 function character_movement() {
-	if (TU==0) {
+	if (TU==0 && ST>-1) {
 		var goto_x, goto_y;
 		goto_x		= x;
 		goto_y		= y;
@@ -74,16 +74,30 @@ function character_interaction() {
 				var folder = instance_place(x,y,objFolder);
 				if (folder!=noone) {
 					var goto = folder.goto;
-					//if (LVLACTIVE > goto) { global.lvl_bg[LVLACTIVE] = 0; }
-					
-					// -- Close older windows
-					for (i=LVLACTIVE; i<global.levels_total; i++) {
-						show_debug_message("Folder "+string(i));
-						global.lvl_bg[i] = 0;
+					show_debug_message(string(LVLACTIVE) + " - " + string(goto));
+					if (LVLACTIVE > goto) {
+						global.lvl_bg[LVLACTIVE] = 0;
+						
+						// -- Close older windows
+						for (i=LVLACTIVE; i<global.levels_total; i++) {
+							global.lvl_bg[i] = 0;
+						}
 					}
 					
 					level_goto(goto,folder.goto_x,folder.goto_y);
 				}
+			}
+		}
+		
+		// -- Key
+		if (place_meeting(x,y,objKey)) {
+			var keyHold = instance_place(x,y,objKey);
+			if (instance_exists(keyHold)) {
+				window_update_background();
+				global.keys++;
+				var whichkey = keyHold.mykey;
+				global.key[whichkey] = 1;
+				with (keyHold) { instance_destroy(); }
 			}
 		}
 	}

@@ -43,6 +43,7 @@ function make_levels() {
 	add_thing(global.lvl0_things,objBlock,1,2);
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
 	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_Bob,6,3,1,"Bob.jpg"]);
+	add_thing(global.lvl0_things,objDoor,0,2,[0,1]);
 	
 	var xx = 2;
 	var yy = 2;
@@ -59,6 +60,7 @@ function make_levels() {
 	add_thing(global.lvl1_things,objFolder,1,1,[0,0,2,1]);	
 	add_thing(global.lvl1_things,objBlock,1,3);
 	add_thing(global.lvl1_things,objFolder,3,2,[0,2,0,7]);
+	add_thing(global.lvl1_things,objKey,2,2,[0,1]);
 	
 	var xx = 6;
 	var yy = 4;

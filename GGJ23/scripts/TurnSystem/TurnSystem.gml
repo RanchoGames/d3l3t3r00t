@@ -15,16 +15,24 @@ global.total_turns = 1;
 #macro TUTIMERTOTAL global.turn_timer_total
 #macro TUTOTAL global.total_turns
 
+global.lvl_antivirus = 7;
+
 
 // -- Steps
-global.steps = 7;
-global.steps_total = 7;
+global.steps = 6;
+global.steps_total = 6;
 
 #macro ST global.steps
 #macro STTOTAL global.steps_total
 
 global.starting_x = 0;
 global.starting_y = 0;
+
+
+// -- Keys
+global.keys = 0;
+global.key[0] = 0;
+global.key[1] = 0;
 
 
 /*
@@ -35,26 +43,12 @@ global.starting_y = 0;
 
 function turn_next(){
 	var myturn = (TU==0 ? 1 : 0);
-	if (myturn /*&& LVLACTIVE>=7*/) { ST--; }
+	if (myturn && LVLACTIVE>=global.lvl_antivirus) { ST--; }
 	
 	TU++;
 	TUTIMER = TUTIMERTOTAL;
 	
 	if (TU>TUTOTAL) { TU=0; }
-	
-	// -- Restart level if no steps available
-	if (ST<=0) {
-		with (objCharacter) {
-			objCharacter.x = global.starting_x;
-			objCharacter.y = global.starting_y;
-			objCharacter.an_x = objCharacter.x;
-			objCharacter.an_y = objCharacter.y;
-			
-			ST = STTOTAL;
-			global.shake_x = 6;
-			global.shake_y = 6;
-		}
-	}
 }
 
 
@@ -72,6 +66,31 @@ function turn_step() {
 	if (TU==1 && TUTIMER==0) {
 		turn_enemy();
 		turn_next();
+	}
+	
+	// -- Restart level if no steps available
+	if (ST<=0 && floor(TUTIMER)==0) {
+		var overFolder = 0;
+		if (instance_exists(objCharacter)) {
+			with (objCharacter) {
+				if (place_meeting(x,y,objFolder)) {
+					overFolder = 1;
+				}
+			}
+		}
+		
+		if ((ST==0 && overFolder==0) or ST<0) {
+			with (objCharacter) {
+				objCharacter.x = global.starting_x;
+				objCharacter.y = global.starting_y;
+				objCharacter.an_x = objCharacter.x;
+				objCharacter.an_y = objCharacter.y;
+			
+				ST = STTOTAL;
+				global.shake_x = 6;
+				global.shake_y = 6;
+			}
+		}
 	}
 }
 

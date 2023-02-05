@@ -178,6 +178,18 @@ function level_start(level) {
 					new_obj.tipo	= piece.data[3];
 					new_obj.title	= piece.data[4];
 				break;
+				
+				// - Door
+				case objDoor:
+					new_obj.tipo	= piece.data[0];
+					new_obj.step	= piece.data[1];
+				break;
+				
+				// -- Key
+				case objKey:
+					new_obj.tipo	= piece.data[0];
+					new_obj.mykey	= piece.data[1];
+				break;
 			}
 		}
 	}
@@ -200,6 +212,8 @@ function level_goto(level,gox,goy) {
 	with (objBlock) { instance_destroy(); }
 	with (objFolder) { instance_destroy(); }
 	with (objTXT) { instance_destroy(); }
+	with (objDoor) { instance_destroy(); }
+	with (objKey) { instance_destroy(); }
 	
 	window_update_playablezone(LVLACTIVE);
 	level_start(LVLACTIVE);
@@ -214,4 +228,6 @@ function level_goto(level,gox,goy) {
 		
 		restart_starting_point(objCharacter.x,objCharacter.y);
 	}
+	
+	global.surface_update = 1;
 }
