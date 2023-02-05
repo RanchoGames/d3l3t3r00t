@@ -276,25 +276,44 @@ function window_total_imgs() {
 	return ds_map_size(IMG);
 }
 
+function window_img_find(bid) {
+	var returnid = noone;
+	
+	with (objTXT) {
+		if (miid==bid) { returnid = id; }
+	}
+	
+	return returnid;
+}
+
 function window_draw_img() {
 	var total_img = window_total_imgs();
+	show_debug_message(string(total_img));
 	if (total_img>0) {
 		for (i=0; i<total_img; i++) {
 			var metadata = IMG[? i];
 			
-			var nid = metadata.iid;
-			if (instance_exists(nid)) {
-				//if (nid.showing) {
-					var image	= metadata.image;
-					var image_x	= metadata.x1;
-					var image_y	= metadata.y1;
-					var image_w = sprite_get_width(image);
-					var image_h = sprite_get_height(image);
-					var image_title = metadata.title;
+			show_debug_message(metadata);
 			
-					draw_window(image_x,image_y,image_x+(image_w/GRID_SIZE),image_y+(image_h/GRID_SIZE),1,image_title);
-					draw_sprite(image,0,image_x*GRID_SIZE,image_y*GRID_SIZE);
-				//}
+			var nid = metadata.iid;
+			var tid = window_img_find(nid);
+			
+			show_debug_message(nid);
+			if (tid!=noone) {
+				if (instance_exists(tid)) {
+					show_debug_message("show something...");
+					//if (nid.showing) {
+						var image	= metadata.image;
+						var image_x	= metadata.x1;
+						var image_y	= metadata.y1;
+						var image_w = sprite_get_width(image);
+						var image_h = sprite_get_height(image);
+						var image_title = metadata.title;
+			
+						draw_window(image_x,image_y,image_x+(image_w/GRID_SIZE),image_y+(image_h/GRID_SIZE),1,image_title);
+						draw_sprite(image,0,image_x*GRID_SIZE,image_y*GRID_SIZE);
+					//}
+				}
 			}
 		}
 	}
