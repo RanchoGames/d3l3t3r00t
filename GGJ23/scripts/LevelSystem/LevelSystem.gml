@@ -268,7 +268,7 @@ function restart_everything() {
 	LVLACTIVE = 0;
 
 	ENDED = 0;
-	global.ended_timer = 90;
+	global.ended_timer = global.ended_timer_total;
 
 	with (objFolder) { instance_destroy(); }
 	with (objTXT) { instance_destroy(); }
@@ -298,6 +298,8 @@ function restart_everything() {
 	global.keys = 0;
 	global.key[0] = 0;
 	global.key[1] = 0;
+	
+	global.facing = 1;
 
 	game_restart();
 }

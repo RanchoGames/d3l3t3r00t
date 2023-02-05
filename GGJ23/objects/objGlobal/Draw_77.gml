@@ -21,5 +21,5 @@ draw_text_transformed((room_width-28)*WINDOW_SCALE,(room_height-15)*WINDOW_SCALE
 draw_set_font(fntPixel);
 
 if (ENDED) {
-	draw_sprite_ext(sprBluescreen,0,0,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
+	draw_sprite_ext(sprBluescreen,((floor(global.ended_timer/16))%2==0 ? 0 : 1),0,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
 }

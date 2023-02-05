@@ -1,6 +1,6 @@
-step = 1;
+step = noone;
 should_draw = 0;
 alarm[0] = 1;
 
-tipo = 0;
+tipo = noone;
 depth = 2;

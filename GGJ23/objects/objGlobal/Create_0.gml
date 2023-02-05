@@ -25,5 +25,6 @@ global.fullscreen = 0;
 global.fullscreen_update = 0;
 
 global.ended = 0;
-global.ended_timer = 90;
+global.ended_timer_total = 120;
+global.ended_timer = global.ended_timer_total;
 #macro ENDED global.ended

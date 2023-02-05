@@ -1,6 +1,8 @@
-if (global.keys >= step) {
-	instance_destroy();
-}
-else {
-	should_draw = 1;
+if (step!=noone) {
+	if (global.key[step]==1) {
+		instance_destroy();
+	}
+	else {
+		should_draw = 1;
+	}
 }

@@ -2,6 +2,7 @@
 
 character_movement();
 character_interaction();
+gamepad_movement();
 
 img_timer++;
 if (img_timer>=img_timer_total) {

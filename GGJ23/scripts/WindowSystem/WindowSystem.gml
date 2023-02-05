@@ -228,7 +228,7 @@ function window_draw_background() {
 						}
 						
 						if (piece_object == objPowerup) {
-							piece_subimg = choose(0,1,2,3);
+							piece_subimg = 0;
 						}
 						
 						if (should_draw) {
@@ -288,20 +288,14 @@ function window_img_find(bid) {
 
 function window_draw_img() {
 	var total_img = window_total_imgs();
-	show_debug_message(string(total_img));
 	if (total_img>0) {
 		for (i=0; i<total_img; i++) {
 			var metadata = IMG[? i];
 			
-			show_debug_message(metadata);
-			
 			var nid = metadata.iid;
 			var tid = window_img_find(nid);
-			
-			show_debug_message(nid);
 			if (tid!=noone) {
 				if (instance_exists(tid)) {
-					show_debug_message("show something...");
 					//if (nid.showing) {
 						var image	= metadata.image;
 						var image_x	= metadata.x1;

@@ -4,13 +4,54 @@
 □━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
 */
 
-#macro KLEFT (keyboard_check_pressed(vk_left) or gamepad_button_check_pressed(0,gp_padl))
-#macro KRIGHT (keyboard_check_pressed(vk_right) or gamepad_button_check_pressed(0,gp_padr))
-#macro KUP (keyboard_check_pressed(vk_up) or gamepad_button_check_pressed(0,gp_padu))
-#macro KDOWN (keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd))
+global.facing = 1;
+
+global.gp_pressed_left	= 0;
+global.gp_pressed_right = 0;
+global.gp_pressed_up	= 0;
+global.gp_pressed_down	= 0;
+global.gp_pressing		= 0;
+
+#macro KLEFT (keyboard_check_pressed(vk_left) or gamepad_button_check_pressed(0,gp_padl) or global.gp_pressed_left)
+#macro KRIGHT (keyboard_check_pressed(vk_right) or gamepad_button_check_pressed(0,gp_padr) or global.gp_pressed_right)
+#macro KUP (keyboard_check_pressed(vk_up) or gamepad_button_check_pressed(0,gp_padu) or global.gp_pressed_up)
+#macro KDOWN (keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd) or global.gp_pressed_down)
 #macro KINTERACT (keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1))
 
-global.facing = 1;
+
+/*
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+- GAMEPAD MOVEMENT
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+*/
+
+function gamepad_movement() {
+	//Reset
+	global.gp_pressed_left	= 0;
+	global.gp_pressed_right = 0;
+	global.gp_pressed_up	= 0;
+	global.gp_pressed_down	= 0;
+	
+	//Info
+	var haxis = gamepad_axis_value(0, gp_axislh);
+	var vaxis = gamepad_axis_value(0, gp_axislv);
+	var treeshold = .7;
+	var treesholdback = .5;
+	
+	if (global.gp_pressing==0 && TUTIMER==0) {
+		if (haxis<-treeshold) { global.gp_pressed_left=1; global.gp_pressing = 1; }
+		if (haxis> treeshold) { global.gp_pressed_right=1; global.gp_pressing = 1; }
+		if (vaxis<-treeshold) { global.gp_pressed_up=1; global.gp_pressing = 1; }
+		if (vaxis> treeshold) { global.gp_pressed_down=1; global.gp_pressing = 1; }
+	}
+	else {
+		if (abs(haxis)<treesholdback)
+		&& (abs(vaxis<treesholdback)) {
+			global.gp_pressing = 0;
+		}
+	}
+}
+
 
 
 /*
@@ -102,6 +143,13 @@ function character_interaction() {
 						}
 					}
 					
+					if (LVLACTIVE > goto) {
+						sonar(sndCAbajo);
+					}
+					else {
+						sonar(sndCArriba);
+					}
+					
 					level_goto(goto,folder.goto_x,folder.goto_y);
 				}
 			}
@@ -112,6 +160,7 @@ function character_interaction() {
 			var keyHold = instance_place(x,y,objKey);
 			if (instance_exists(keyHold)) {
 				window_update_background();
+				sonar(sndKey);
 				global.keys++;
 				var whichkey = keyHold.mykey;
 				global.key[whichkey] = 1;
@@ -127,6 +176,7 @@ function character_interaction() {
 				if (powerHold.activated) {
 					ST = STTOTAL;
 					STKEYS = 0;
+					sonar(sndPowerup);
 					with (powerHold) { activated = 0; }
 				}
 			}
@@ -136,7 +186,7 @@ function character_interaction() {
 		if (place_meeting(x,y,objC)) {
 			audio_stop_all();
 			audio_play_sound(sndGlitch,0,1);
-			audio_sound_gain(sndGlitch,0.5,0);
+			audio_sound_gain(sndGlitch,0.3,0);
 			ENDED = 1;
 		}
 	}
