@@ -42,7 +42,7 @@ function make_levels() {
 	
 	//add_thing(global.lvl0_things,objBlock,1,2,1);
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
-	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_Bob,6,3,1,"Bob.jpg"]);
+	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_controls,6,3,1,"controls.txt"]);
 	//add_thing(global.lvl0_things,objDoor,0,2,[0,1]);
 	
 	var xx = 2;
@@ -281,11 +281,11 @@ function make_levels() {
 	global.lvl15_things = ds_map_create();
 	
 	add_thing(global.lvl15_things,objFolder,3,0,[0,14,2,0]);
-	//add_thing(global.lvl15_things,objTXT,1,0,[sprImg_Bob,6,3,1,"Bob.jpg"]);
+	add_thing(global.lvl15_things,objTXT,1,0,[sprImg_Bob,16,3,1,"Bob.jpg"]);
 	//add_thing(global.lvl15_things,objBlock,0,0);
 	//add_thing(global.lvl15_things,objBlock,1,0);
 
-	var xx = 5;
+	var xx = 4;
 	var yy = 2;
 	var ww = 7;
 	var hh = 4;
