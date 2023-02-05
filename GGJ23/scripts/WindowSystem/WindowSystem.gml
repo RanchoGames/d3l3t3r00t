@@ -227,9 +227,9 @@ function window_draw_background() {
 							}
 						}
 						
-						/*if (piece_object == objBlock) {
+						if (piece_object == objPowerup) {
 							piece_subimg = choose(0,1,2,3);
-						}*/
+						}
 						
 						if (should_draw) {
 							draw_sprite_ext(piece_sprite,piece_subimg,piece_x,piece_y,1,1,0,c_white,.5);

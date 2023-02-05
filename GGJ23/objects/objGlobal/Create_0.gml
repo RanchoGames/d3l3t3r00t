@@ -1,10 +1,11 @@
 global.debug = 0;
 application_surface_draw_enable(false);
-display_set_gui_size(640*2,360*2);
 
+global.scale = 2;
+#macro WINDOW_SCALE global.scale
+
+display_set_gui_size(640*WINDOW_SCALE,360*WINDOW_SCALE);
 display_set_gui_maximize(WINDOW_SCALE,WINDOW_SCALE,0,0);
-
-#macro WINDOW_SCALE 2
 
 window_set_size(640*WINDOW_SCALE,360*WINDOW_SCALE);
 window_center();
@@ -20,3 +21,9 @@ draw_set_font(fntPixel);
 depth = -2;
 
 global.sonido = 1;
+global.fullscreen = 0;
+global.fullscreen_update = 0;
+
+global.ended = 0;
+global.ended_timer = 90;
+#macro ENDED global.ended

@@ -61,6 +61,7 @@ function make_levels() {
 	add_thing(global.lvl1_things,objBlock,1,3);
 	add_thing(global.lvl1_things,objFolder,3,2,[1,2,0,7]);
 	//add_thing(global.lvl1_things,objKey,2,2,[0,1]);
+	add_thing(global.lvl1_things,objC,3,3);
 	
 	var xx = 6;
 	var yy = 4;
@@ -186,6 +187,7 @@ function make_levels() {
 	add_thing(global.lvl9_things,objFolder,3,4,[1,98,0,0]);
 	add_thing(global.lvl9_things,objBlock,0,0);
 	add_thing(global.lvl9_things,objBlock,2,1);
+	add_thing(global.lvl9_things,objPowerup,3,2);
 
 	var xx = 4;
 	var yy = 8;

@@ -133,6 +133,28 @@ function level_get_levels() {
 */
 
 function level_start(level) {
+	// - Musica
+	if (LVLACTIVE>0) {
+		if (is_musica(sndMusic1)==0) {
+			sonar_musica(sndMusic1);
+			audio_sound_gain(sndMusic1,0,0);
+			audio_sound_gain(sndMusic1,.6,3000);
+		}
+	}
+	
+	if (LVLACTIVE>6) {
+		if (is_musica(sndMusic2)==0) {
+			sonar_musica(sndMusic2);
+			audio_sound_gain(sndMusic2,0,0);
+			audio_sound_gain(sndMusic2,.5,4000);
+		}
+		
+		if (is_musica(sndMusic1)) {
+			audio_sound_gain(sndMusic1,0,2000);
+		}
+	}
+	
+	// - Movement
 	STKEYS = 0;
 	
 	var things = level_get_things(level);
@@ -221,6 +243,8 @@ function level_goto(level,gox,goy) {
 	with (objTXT) { instance_destroy(); }
 	with (objDoor) { instance_destroy(); }
 	with (objKey) { instance_destroy(); }
+	with (objPowerup) { instance_destroy(); }
+	with (objC) {instance_destroy(); }
 	
 	window_update_playablezone(LVLACTIVE);
 	level_start(LVLACTIVE);
@@ -237,4 +261,43 @@ function level_goto(level,gox,goy) {
 	}
 	
 	global.surface_update = 1;
+}
+
+
+function restart_everything() {
+	LVLACTIVE = 0;
+
+	ENDED = 0;
+	global.ended_timer = 90;
+
+	with (objFolder) { instance_destroy(); }
+	with (objTXT) { instance_destroy(); }
+	with (objBlock) { instance_destroy(); }
+	with (objCharacter) { instance_destroy(); }
+
+	audio_stop_all();
+
+	for (i=0; i<global.levels_total; i++) {
+		global.lvl_bg[i] = 0;
+	}
+
+	/*ds_map_destroy(LVL);
+	ds_map_destroy(IMG);*/
+
+	ST = 0;
+	global.starting_x = 0;
+
+	global.playablezone_startx = 2;
+	global.playablezone_starty = 2;
+	global.playablezone_endx = 5;
+	global.playablezone_endy = 5;
+
+	surface_free(global.surface_background);
+	global.surface_update = 0;
+
+	global.keys = 0;
+	global.key[0] = 0;
+	global.key[1] = 0;
+
+	game_restart();
 }

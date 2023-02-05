@@ -86,6 +86,8 @@ function turn_step() {
 		
 		if ((ST==0 && overFolder==0) or ST<0) {
 			STKEYS = 0;
+			with (objPowerup) { activated = 1; }
+			
 			with (objCharacter) {
 				objCharacter.x = global.starting_x;
 				objCharacter.y = global.starting_y;

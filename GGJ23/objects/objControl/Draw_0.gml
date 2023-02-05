@@ -1,9 +1,11 @@
 /// @description Draw antivirus
 
-window_draw_background();
+if (global.fullscreen_update==0) {
+	window_draw_background();
+}
 
 // -- Draw antivirus
-//if (LVLACTIVE >= global.lvl_antivirus) {
+if (LVLACTIVE >= global.lvl_antivirus) {
 	var antivirus_x = (room_width/2)-(240/2);
 	var antivirus_y = room_height-64-8;
 
@@ -39,7 +41,7 @@ window_draw_background();
 	
 	// - Abira
 	draw_sprite(sprAbira,0,antivirus_x+12,antivirus_y+12);
-//}
+}
 
 
 // -- Draw active level

@@ -20,7 +20,7 @@ global.facing = 1;
 */
 
 function character_movement() {
-	if (TU==0 && ST>-1) {
+	if (TU==0 && ST>-1 && ENDED==0) {
 		var goto_x, goto_y;
 		goto_x		= x;
 		goto_y		= y;
@@ -45,33 +45,35 @@ function character_movement() {
 }
 
 function character_moveset(goto_x,goto_y) {
-	// -- Collision
-	var collision = place_meeting(goto_x,goto_y,parBlock);
-	var inside = collision_playablezone(goto_x,goto_y);
+	if (ENDED==0) {
+		// -- Collision
+		var collision = place_meeting(goto_x,goto_y,parBlock);
+		var inside = collision_playablezone(goto_x,goto_y);
 		
-	// -- Movement
-	if (collision==false && inside) {
-		x = goto_x;
-		y = goto_y;
+		// -- Movement
+		if (collision==false && inside) {
+			x = goto_x;
+			y = goto_y;
 		
-		// -- Sound
-		var stepsDone = STKEYS;
-		if (stepsDone<=5) {
-			switch (stepsDone) {
-				case 0: sonar(sndPaso1); break;
-				case 1: sonar(sndPaso2); break;
-				case 2: sonar(sndPaso3); break;
-				case 3: sonar(sndPaso4); break;
-				case 4: sonar(sndPaso5); break;
-				case 5: sonar(sndPaso6); break;
+			// -- Sound
+			var stepsDone = STKEYS;
+			if (stepsDone<=5) {
+				switch (stepsDone) {
+					case 0: sonar(sndPaso1); break;
+					case 1: sonar(sndPaso2); break;
+					case 2: sonar(sndPaso3); break;
+					case 3: sonar(sndPaso4); break;
+					case 4: sonar(sndPaso5); break;
+					case 5: sonar(sndPaso6); break;
+				}
 			}
-		}
-		else {
-			sonar(sndPaso6);
-		}
+			else {
+				sonar(sndPaso6);
+			}
 				
-		// -- Next turn
-		turn_next();
+			// -- Next turn
+			turn_next();
+		}
 	}
 }
 
@@ -83,7 +85,7 @@ function character_moveset(goto_x,goto_y) {
 */
 
 function character_interaction() {
-	if (TU==0 && TUTIMER==0) {
+	if (TU==0 && TUTIMER==0 && ENDED==0) {
 		if (KINTERACT) {
 			// -- Folder
 			if (place_meeting(x,y,objFolder)) {				
@@ -115,6 +117,27 @@ function character_interaction() {
 				global.key[whichkey] = 1;
 				with (keyHold) { instance_destroy(); }
 			}
+		}
+		
+		
+		// -- Powerup
+		if (place_meeting(x,y,objPowerup)) {
+			var powerHold = instance_place(x,y,objPowerup);
+			if (instance_exists(powerHold)) {
+				if (powerHold.activated) {
+					ST = STTOTAL;
+					STKEYS = 0;
+					with (powerHold) { activated = 0; }
+				}
+			}
+		}
+		
+		// -- End
+		if (place_meeting(x,y,objC)) {
+			audio_stop_all();
+			audio_play_sound(sndGlitch,0,1);
+			audio_sound_gain(sndGlitch,0.5,0);
+			ENDED = 1;
 		}
 	}
 }
