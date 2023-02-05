@@ -90,7 +90,7 @@ function make_levels() {
 	global.lvl3_things = ds_map_create();
 	
 	add_thing(global.lvl3_things,objFolder,1,1,[0,2,1,1]);	
-	add_thing(global.lvl3_things,objFolder,3,0,[choose(4,5,6,7,8,9,10),20,1,1]);
+	add_thing(global.lvl3_things,objFolder,3,0,[choose(4,5,6,7,8,9,10),20  ,1,1]);
 	add_thing(global.lvl3_things,objFolder,4,2,[choose(4,5,6,7,8,9,10),5,4,3]);
 	add_thing(global.lvl3_things,objFolder,2,3,[choose(4,5,6,7,8,9,10),4,1,1]);
 	add_thing(global.lvl3_things,objBlock,0,2);
@@ -125,7 +125,7 @@ function make_levels() {
 	global.lvl5_things = ds_map_create();
 	
 	add_thing(global.lvl5_things,objFolder,4,3,[0,3,4,2]);
-	add_thing(global.lvl5_things,objFolder,2,1,choose(4,5,6,7,8,9,10),6,0,0]);
+	add_thing(global.lvl5_things,objFolder,2,1,[choose(4,5,6,7,8,9,10),6,0,0]);
 	add_thing(global.lvl5_things,objBlock,0,3);
 	add_thing(global.lvl5_things,objBlock,3,0);
 
@@ -222,8 +222,8 @@ function make_levels() {
 	global.lvl11_things = ds_map_create();
 	
 	add_thing(global.lvl11_things,objFolder,1,0,[0,10,3,3]);
-	add_thing(global.lvl11_things,objFolder,0,1,choose(4,5,6,7,8,9,10),12,6,0]);
-	add_thing(global.lvl11_things,objFolder,2,3,choose(4,5,6,7,8,9,10),16,2,2]);
+	add_thing(global.lvl11_things,objFolder,0,1,[choose(4,5,6,7,8,9,10),12,6,0]);
+	add_thing(global.lvl11_things,objFolder,2,3,[choose(4,5,6,7,8,9,10),16,2,2]);
 	add_thing(global.lvl11_things,objBlock,2,1);
 	add_thing(global.lvl11_things,objBlock,0,2);
 
@@ -326,7 +326,7 @@ function make_levels() {
 	global.lvl18_things = ds_map_create();
 	
 	add_thing(global.lvl18_things,objFolder,0,1,[0,19,0,4]);
-	add_thing(global.lvl18_things,objFolder,3,2,choose(4,5,6,7,8,9,10),10,11,1]);
+	add_thing(global.lvl18_things,objFolder,3,2,[choose(4,5,6,7,8,9,10),10,11,1]);
 	add_thing(global.lvl18_things,objPowerup,1,3);
 	add_thing(global.lvl18_things,objBlock,2,0);	
 
@@ -341,7 +341,7 @@ function make_levels() {
 	// -- Level 19
 	global.lvl19_things = ds_map_create();
 	
-	add_thing(global.lvl19_things,objFolder,0,4,choose(4,5,6,7,8,9,10),18,3,0]);
+	add_thing(global.lvl19_things,objFolder,0,4,[choose(4,5,6,7,8,9,10),18,3,0]);
 	add_thing(global.lvl19_things,objFolder,4,1,[0,20,6,5]);
 	add_thing(global.lvl19_things,objPowerup,0,1);
 	add_thing(global.lvl19_things,objBlock,1,3);	
@@ -359,8 +359,8 @@ function make_levels() {
 	// -- Level 20
 	global.lvl20_things = ds_map_create();
 	
-	add_thing(global.lvl20_things,objFolder,1,1,choose(4,5,6,7,8,9,10),3,3,0]);
-	add_thing(global.lvl20_things,objFolder,6,5,choose(4,5,6,7,8,9,10),19,4,1]);
+	add_thing(global.lvl20_things,objFolder,1,1,[choose(4,5,6,7,8,9,10),3,3,0]);
+	add_thing(global.lvl20_things,objFolder,6,5,[choose(4,5,6,7,8,9,10),19,4,1]);
 	add_thing(global.lvl20_things,objFolder,4,6,[2,21,5,2]);
 	add_thing(global.lvl20_things,objFolder,8,6,[2,25,1,2]);
 	add_thing(global.lvl20_things,objC,6,0);
@@ -406,7 +406,7 @@ function make_levels() {
 	// -- Level 22
 	global.lvl22_things = ds_map_create();
 	
-	add_thing(global.lvl22_things,objFolder,0,2,choose(4,5,6,7,8,9,10),21,0,1]);
+	add_thing(global.lvl22_things,objFolder,0,2,[choose(4,5,6,7,8,9,10),21,0,1]);
 	add_thing(global.lvl22_things,objFolder,0,4,[0,23,3,3]);
 	add_thing(global.lvl22_things,objPowerup,2,0);
 	add_thing(global.lvl22_things,objPowerup,2,4);
@@ -430,8 +430,8 @@ function make_levels() {
 	global.lvl23_things = ds_map_create();
 	
 	add_thing(global.lvl23_things,objFolder,0,0,[0,9,3,4]);
-	add_thing(global.lvl23_things,objFolder,3,3,choose(4,5,6,7,8,9,10),22,0,4]);
-	add_thing(global.lvl23_things,objFolder,6,2,choose(4,5,6,7,8,9,10),24,0,1]);
+	add_thing(global.lvl23_things,objFolder,3,3,[choose(4,5,6,7,8,9,10),22,0,4]);
+	add_thing(global.lvl23_things,objFolder,6,2,[choose(4,5,6,7,8,9,10),24,0,1]);
 	add_thing(global.lvl23_things,objBlock,1,3);
 	add_thing(global.lvl23_things,objBlock,2,2);
 	add_thing(global.lvl23_things,objBlock,3,1);
