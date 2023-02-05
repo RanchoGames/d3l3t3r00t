@@ -33,6 +33,13 @@
     {"id":{"name":"sprDoor","path":"sprites/sprDoor/sprDoor.yy",},"order":0,},
     {"id":{"name":"objCharacter","path":"objects/objCharacter/objCharacter.yy",},"order":0,},
     {"id":{"name":"sprWindowButtons","path":"sprites/sprWindowButtons/sprWindowButtons.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"sndPaso5","path":"sounds/sndPaso5/sndPaso5.yy",},"order":0,},
+    {"id":{"name":"sprImg_Credits","path":"sprites/sprImg_Credits/sprImg_Credits.yy",},"order":0,},
+    {"id":{"name":"sndMuerte","path":"sounds/sndMuerte/sndMuerte.yy",},"order":0,},
+    {"id":{"name":"sprWindowButtonsBack","path":"sprites/sprWindowButtonsBack/sprWindowButtonsBack.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"sprCharacterMask","path":"sprites/sprCharacterMask/sprCharacterMask.yy",},"order":0,},
     {"id":{"name":"sprCharacter","path":"sprites/sprCharacter/sprCharacter.yy",},"order":0,},
     {"id":{"name":"MovementSystem","path":"scripts/MovementSystem/MovementSystem.yy",},"order":0,},
@@ -45,6 +52,11 @@
     {"id":{"name":"fntPixel","path":"fonts/fntPixel/fntPixel.yy",},"order":0,},
     {"id":{"name":"objTXT","path":"objects/objTXT/objTXT.yy",},"order":0,},
     {"id":{"name":"parBlock","path":"objects/parBlock/parBlock.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"sprPowerup","path":"sprites/sprPowerup/sprPowerup.yy",},"order":0,},
+    {"id":{"name":"sprImg_Family","path":"sprites/sprImg_Family/sprImg_Family.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"objBlock","path":"objects/objBlock/objBlock.yy",},"order":0,},
     {"id":{"name":"sprFolder","path":"sprites/sprFolder/sprFolder.yy",},"order":0,},
     {"id":{"name":"sprImg_Bob","path":"sprites/sprImg_Bob/sprImg_Bob.yy",},"order":0,},
