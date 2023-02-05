@@ -17,8 +17,8 @@ global.total_turns = 1;
 
 
 // -- Steps
-global.steps = 10;
-global.steps_total = 10;
+global.steps = 7;
+global.steps_total = 7;
 
 #macro ST global.steps
 #macro STTOTAL global.steps_total
@@ -35,7 +35,7 @@ global.starting_y = 0;
 
 function turn_next(){
 	var myturn = (TU==0 ? 1 : 0);
-	if (myturn) { ST--; }
+	if (myturn /*&& LVLACTIVE>=7*/) { ST--; }
 	
 	TU++;
 	TUTIMER = TUTIMERTOTAL;
@@ -47,6 +47,8 @@ function turn_next(){
 		with (objCharacter) {
 			objCharacter.x = global.starting_x;
 			objCharacter.y = global.starting_y;
+			objCharacter.an_x = objCharacter.x;
+			objCharacter.an_y = objCharacter.y;
 			
 			ST = STTOTAL;
 			global.shake_x = 6;
@@ -75,7 +77,7 @@ function turn_step() {
 
 // -- Enemies turn
 function turn_enemy() {
-	
+	// :( no enemies
 }
 
 

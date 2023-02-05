@@ -1,3 +1,5 @@
+window_draw_img();
+
 if (global.debug) {
 	// -- GRID
 	draw_set_color(c_gray);

@@ -33,7 +33,7 @@ for (var l = 0; l< 40; l++) {
 function add_level(levelid,name,x1,y1,x2,y2,data) {
 	var struct = {
 		levelid		:		levelid,
-		name		:		name,
+		lvlname		:		name,
 		x1			:		x1,
 		y1			:		y1,
 		x2			:		x2,
@@ -78,7 +78,7 @@ Obtiene el nombre de un nivel desde el ID.
 
 function level_get_name(levelid) {
 	var level = level_get_data(levelid);
-	return level.name;
+	return level.lvlname;
 }
 
 
@@ -169,6 +169,15 @@ function level_start(level) {
 					new_obj.goto_x	= piece.data[2];
 					new_obj.goto_y	= piece.data[3];
 				break;
+				
+				// - Image
+				case objTXT:
+					new_obj.image	= piece.data[0];
+					new_obj.img_x	= piece.data[1];
+					new_obj.img_y	= piece.data[2];
+					new_obj.tipo	= piece.data[3];
+					new_obj.title	= piece.data[4];
+				break;
 			}
 		}
 	}
@@ -190,6 +199,7 @@ function level_goto(level,gox,goy) {
 	LVLACTIVE = level;
 	with (objBlock) { instance_destroy(); }
 	with (objFolder) { instance_destroy(); }
+	with (objTXT) { instance_destroy(); }
 	
 	window_update_playablezone(LVLACTIVE);
 	level_start(LVLACTIVE);
@@ -198,6 +208,8 @@ function level_goto(level,gox,goy) {
 		with (objCharacter) {
 			x = (PLAY_X1 * GRID_SIZE) + (gox * GRID_SIZE);
 			y = (PLAY_Y1 * GRID_SIZE) + (goy * GRID_SIZE);
+			an_x = x;
+			an_y = y;
 		}
 		
 		restart_starting_point(objCharacter.x,objCharacter.y);

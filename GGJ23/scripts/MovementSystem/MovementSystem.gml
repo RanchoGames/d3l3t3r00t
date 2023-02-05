@@ -4,11 +4,11 @@
 □━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
 */
 
-#macro KLEFT keyboard_check_pressed(vk_left)
-#macro KRIGHT keyboard_check_pressed(vk_right)
-#macro KUP keyboard_check_pressed(vk_up)
-#macro KDOWN keyboard_check_pressed(vk_down)
-#macro KINTERACT keyboard_check_pressed(vk_space)
+#macro KLEFT (keyboard_check_pressed(vk_left) or gamepad_button_check_pressed(0,gp_padl))
+#macro KRIGHT (keyboard_check_pressed(vk_right) or gamepad_button_check_pressed(0,gp_padr))
+#macro KUP (keyboard_check_pressed(vk_up) or gamepad_button_check_pressed(0,gp_padu))
+#macro KDOWN (keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd))
+#macro KINTERACT (keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1))
 
 global.facing = 1;
 
@@ -70,13 +70,18 @@ function character_interaction() {
 	if (TU==0 && TUTIMER==0) {
 		if (KINTERACT) {
 			// -- Folder
-			if (place_meeting(x,y,objFolder)) {
-				show_debug_message("folder");
-				
+			if (place_meeting(x,y,objFolder)) {				
 				var folder = instance_place(x,y,objFolder);
 				if (folder!=noone) {
 					var goto = folder.goto;
-					if (LVLACTIVE > goto) { global.lvl_bg[LVLACTIVE] = 0; }
+					//if (LVLACTIVE > goto) { global.lvl_bg[LVLACTIVE] = 0; }
+					
+					// -- Close older windows
+					for (i=LVLACTIVE; i<global.levels_total; i++) {
+						show_debug_message("Folder "+string(i));
+						global.lvl_bg[i] = 0;
+					}
+					
 					level_goto(goto,folder.goto_x,folder.goto_y);
 				}
 			}
