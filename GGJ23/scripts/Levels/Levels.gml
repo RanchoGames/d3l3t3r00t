@@ -68,7 +68,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 4;
 
-	add_level(1,"Folder 1", xx, yy, xx+ww, yy+hh, global.lvl1_things);
+	add_level(1,"GGJ23_", xx, yy, xx+ww, yy+hh, global.lvl1_things);
 	// -- End Level 1
 	
 	
@@ -83,7 +83,7 @@ function make_levels() {
 	var ww = 2;
 	var hh = 8;
 
-	add_level(2,"Folder 2", xx, yy, xx+ww, yy+hh, global.lvl2_things);
+	add_level(2,"Temp", xx, yy, xx+ww, yy+hh, global.lvl2_things);
 	// -- End Level 2
 	
 	// -- Level 3
@@ -101,7 +101,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 4;
 
-	add_level(3,"Folder 3", xx, yy, xx+ww, yy+hh, global.lvl3_things);
+	add_level(3,"Downloads", xx, yy, xx+ww, yy+hh, global.lvl3_things);
 	// -- End Level 3
 	
 	// -- Level 4
@@ -118,7 +118,7 @@ function make_levels() {
 	var ww = 4;
 	var hh = 4;
 
-	add_level(4,"Folder 4", xx, yy, xx+ww, yy+hh, global.lvl4_things);
+	add_level(4,"Torrents", xx, yy, xx+ww, yy+hh, global.lvl4_things);
 	// -- End Level 4
 	
 	// -- Level 5
@@ -134,7 +134,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 4;
 
-	add_level(5,"Folder 5", xx, yy, xx+ww, yy+hh, global.lvl5_things);
+	add_level(5,"Pack creativo goblin", xx, yy, xx+ww, yy+hh, global.lvl5_things);
 	// -- End Level 5
 	
 	// -- Level 6
@@ -148,7 +148,7 @@ function make_levels() {
 	var ww = 4;
 	var hh = 1;
 
-	add_level(6,"Folder 6", xx, yy, xx+ww, yy+hh, global.lvl6_things);
+	add_level(6,"_RANCHOSX", xx, yy, xx+ww, yy+hh, global.lvl6_things);
 	// -- End Level 6
 	
 	// -- Level 7
@@ -161,7 +161,7 @@ function make_levels() {
 	var ww = 6;
 	var hh = 2;
 
-	add_level(7,"Folder 7", xx, yy, xx+ww, yy+hh, global.lvl7_things);
+	add_level(7,"license", xx, yy, xx+ww, yy+hh, global.lvl7_things);
 	// -- End Level 7
 	
 	// -- Level 8
@@ -176,7 +176,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 4;
 
-	add_level(8,"Folder 8", xx, yy, xx+ww, yy+hh, global.lvl8_things);
+	add_level(8,"ROMS", xx, yy, xx+ww, yy+hh, global.lvl8_things);
 	// -- End Level 8
 	
 	// -- Level 9
@@ -193,7 +193,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 5;
 
-	add_level(9,"Folder 9", xx, yy, xx+ww, yy+hh, global.lvl9_things);
+	add_level(9,"Games", xx, yy, xx+ww, yy+hh, global.lvl9_things);
 	// -- End Level 9
 	
 	// -- Level 10
@@ -232,7 +232,7 @@ function make_levels() {
 	var ww = 3;
 	var hh = 4;
 
-	add_level(11,"Work", xx, yy, xx+ww, yy+hh, global.lvl11_things);
+	add_level(11,"School", xx, yy, xx+ww, yy+hh, global.lvl11_things);
 	// -- End Level 11
 	
 	// -- Level 12
@@ -307,7 +307,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 3;
 
-	add_level(16,"Manuals", xx, yy, xx+ww, yy+hh, global.lvl16_things);
+	add_level(16,"Assignments", xx, yy, xx+ww, yy+hh, global.lvl16_things);
 	// -- End Level 16
 	
 	// -- Level 17
@@ -320,7 +320,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 4;
 
-	add_level(17,"Folder 17", xx, yy, xx+ww, yy+hh, global.lvl17_things);
+	add_level(17,"My music", xx, yy, xx+ww, yy+hh, global.lvl17_things);
 	// -- End Level 17
 	
 	// -- Level 18
@@ -354,7 +354,7 @@ function make_levels() {
 	var ww = 5;
 	var hh = 5;
 
-	add_level(19,"Folder 19", xx, yy, xx+ww, yy+hh, global.lvl19_things);
+	add_level(19,"user", xx, yy, xx+ww, yy+hh, global.lvl19_things);
 	// -- End Level 19
 	
 	// -- Level 20
@@ -383,7 +383,7 @@ function make_levels() {
 	var ww = 13;
 	var hh = 8;
 
-	add_level(20,"This PC", xx, yy, xx+ww, yy+hh, global.lvl20_things);
+	add_level(20,"My PC", xx, yy, xx+ww, yy+hh, global.lvl20_things);
 	// -- End Level 20
 	
 	// -- Level 21
@@ -446,7 +446,7 @@ function make_levels() {
 	var ww = 8;
 	var hh = 4;
 
-	add_level(23,"Folder 23", xx, yy, xx+ww, yy+hh, global.lvl23_things);
+	add_level(23,"My PSP files", xx, yy, xx+ww, yy+hh, global.lvl23_things);
 	// -- End Level 23
 	
 	// -- Level 24
