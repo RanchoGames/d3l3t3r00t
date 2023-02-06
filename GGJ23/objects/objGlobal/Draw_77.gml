@@ -1,4 +1,5 @@
-draw_surface_ext(application_surface,8*WINDOW_SCALE,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
+var extraWindow = (room==rmJuego ? 8 : 0);
+draw_surface_ext(application_surface,extraWindow*WINDOW_SCALE,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
 
 if (PLAYING) {
 	draw_set_color(global.bgcolor);
@@ -27,8 +28,17 @@ if (PLAYING) {
 	}
 }
 else {
-	draw_set_color(make_color_rgb(42,37,43));
-	draw_set_alpha(1);
-	draw_rectangle(0,0,8 * WINDOW_SCALE,room_height*WINDOW_SCALE,0);
-	draw_set_color(c_white);
+	if (room==rmInit) {
+		draw_set_color(make_color_rgb(42,37,43));
+		draw_set_alpha(1);
+		draw_rectangle(0,0,8 * WINDOW_SCALE,room_height*WINDOW_SCALE,0);
+		draw_set_color(c_white);
+	}
+	else {
+		/*var colorFondo = (objIntro.ending ? make_color_rgb(42,37,43) : make_color_rgb(219,218,208));
+		draw_set_color(colorFondo);
+		draw_set_alpha(1);
+		draw_rectangle(0,0,8 * WINDOW_SCALE,room_height*WINDOW_SCALE,0);
+		draw_set_color(c_white);*/
+	}	
 }

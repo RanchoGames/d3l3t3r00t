@@ -1,1 +1,1 @@
-room_goto(rmJuego);
+room_goto(rmIntro);
