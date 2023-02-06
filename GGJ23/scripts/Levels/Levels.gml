@@ -28,19 +28,10 @@ function add_thing(map,object,x1,y1,data) {
 }
 
 function make_levels() {
-	/*
-		add_thing(global.lvl1_things,objFolder,X,Y,[A,B,C,D]);
-		->	A: Sprite
-		->	B: Target Room ID
-		->	C: Teleport X
-		->	D: Teleport Y
-	*/
-	//add_thing(global.lvl0_things,objBlock,1,2);
-	
+
 	// -- Level 0
 	global.lvl0_things = ds_map_create();
 	
-	//add_thing(global.lvl0_things,objBlock,1,2,1);
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
 	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_controls,6,3,0,"controls.txt"]);
 	add_thing(global.lvl0_things,objTXT,0,2,[sprImg_credits,6,3,0,"credits.txt"]);
@@ -60,8 +51,6 @@ function make_levels() {
 	add_thing(global.lvl1_things,objFolder,1,1,[2,0,2,1]);	
 	add_thing(global.lvl1_things,objBlock,1,3,choose(0,1,2,3));
 	add_thing(global.lvl1_things,objFolder,3,2,[choose(3,3,4,5,6,7),2,0,7]);
-	//add_thing(global.lvl1_things,objKey,2,2,[0,1]);
-	//add_thing(global.lvl1_things,objC,3,3);
 	
 	var xx = 6;
 	var yy = 3;
