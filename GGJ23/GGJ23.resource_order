@@ -36,6 +36,7 @@
     {"name":"sprWindow","order":2,"path":"sprites/sprWindow/sprWindow.yy",},
     {"name":"sndPaso3","order":2,"path":"sounds/sndPaso3/sndPaso3.yy",},
     {"name":"sprBlock","order":1,"path":"sprites/sprBlock/sprBlock.yy",},
+    {"name":"sprImg_credits","order":3,"path":"sprites/sprImg_credits/sprImg_credits.yy",},
     {"name":"sndPaso4","order":3,"path":"sounds/sndPaso4/sndPaso4.yy",},
     {"name":"objTXT","order":2,"path":"objects/objTXT/objTXT.yy",},
     {"name":"sprPowerup","order":20,"path":"sprites/sprPowerup/sprPowerup.yy",},
