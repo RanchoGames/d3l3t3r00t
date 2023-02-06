@@ -189,5 +189,6 @@ function character_interaction() {
 			audio_sound_gain(sndGlitch,0.3,0);
 			ENDED = 1;
 		}
+
 	}
 }

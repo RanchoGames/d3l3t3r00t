@@ -42,8 +42,8 @@ function make_levels() {
 	
 	//add_thing(global.lvl0_things,objBlock,1,2,1);
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
-	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_controls,6,3,1,"controls.txt"]);
-	//add_thing(global.lvl0_things,objDoor,0,2,[0,1]);
+	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_controls,6,3,0,"controls.txt"]);
+	add_thing(global.lvl0_things,objTXT,0,2,[sprImg_credits,6,3,0,"credits.txt"]);
 	
 	var xx = 2;
 	var yy = 2;
