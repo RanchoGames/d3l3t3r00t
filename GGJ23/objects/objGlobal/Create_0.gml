@@ -12,7 +12,6 @@ draw_set_font(fntPixel);
 
 depth = -2;
 
-global.sonido = 1;
 global.fullscreen = 0;
 global.fullscreen_update = 0;
 
@@ -24,7 +23,6 @@ global.ended_timer = global.ended_timer_total;
 global.playing = 0;
 #macro PLAYING global.playing
 
-global.is_html = (os_browser == browser_not_a_browser ? 0 : 1);
-#macro IS_HTML global.is_html
+
 
 alarm[1] = 1;

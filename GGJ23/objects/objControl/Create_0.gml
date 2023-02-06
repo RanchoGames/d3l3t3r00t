@@ -10,3 +10,4 @@ dots_timer_total = 10;
 glass = 0;
 
 level_start(0);
+global.already_played = 1;

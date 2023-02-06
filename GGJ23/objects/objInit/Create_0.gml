@@ -24,3 +24,6 @@ dots = 0;
 dots_total = 3;
 dots_timer = 0;
 dots_timer_total = 10;
+
+if (global.already_played) { room_goto(rmJuego); }
+show_debug_message(string(global.already_played));
