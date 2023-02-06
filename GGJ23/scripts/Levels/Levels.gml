@@ -129,7 +129,7 @@ function make_levels() {
 	add_thing(global.lvl5_things,objBlock,0,3,choose(0,1,2,3));
 	add_thing(global.lvl5_things,objBlock,3,0,choose(0,1,2,3));
 
-	var xx = 4;
+	var xx = 2;
 	var yy = 5;
 	var ww = 5;
 	var hh = 4;
@@ -156,8 +156,8 @@ function make_levels() {
 	
 	add_thing(global.lvl7_things,objFolder,5,1,[0,8,3,3]);
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 3;
+	var yy = 9;
 	var ww = 6;
 	var hh = 2;
 
@@ -171,8 +171,8 @@ function make_levels() {
 	add_thing(global.lvl8_things,objFolder,1,1,[0,9,4,0]);
 	add_thing(global.lvl8_things,objBlock,0,0,choose(0,1,2,3));
 
-	var xx = 14;
-	var yy = 5;
+	var xx = 17;
+	var yy = 2;
 	var ww = 5;
 	var hh = 4;
 
@@ -210,8 +210,8 @@ function make_levels() {
 	add_thing(global.lvl10_things,objBlock,9,0,choose(0,1,2,3));
 	add_thing(global.lvl10_things,objBlock,13,4,choose(0,1,2,3));
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 5;
+	var yy = 3;
 	var ww = 14;
 	var hh = 5;
 
@@ -227,8 +227,8 @@ function make_levels() {
 	add_thing(global.lvl11_things,objBlock,2,1,choose(0,1,2,3));
 	add_thing(global.lvl11_things,objBlock,0,2,choose(0,1,2,3));
 
-	var xx = 6;
-	var yy = 4;
+	var xx = 7;
+	var yy = 2;
 	var ww = 3;
 	var hh = 4;
 
@@ -241,8 +241,8 @@ function make_levels() {
 	add_thing(global.lvl12_things,objFolder,6,0,[0,11,0,1]);
 	add_thing(global.lvl12_things,objFolder,1,1,[choose(4,5,6,7,8,9),13,0,0]);
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 16;
+	var yy = 7;
 	var ww = 7;
 	var hh = 2;
 
@@ -270,7 +270,7 @@ function make_levels() {
 	add_thing(global.lvl14_things,objFolder,2,0,[choose(4,5,6,7,8,9),15,3,0]);
 
 	var xx = 18;
-	var yy = 3;
+	var yy = 1;
 	var ww = 3;
 	var hh = 1;
 
@@ -285,7 +285,7 @@ function make_levels() {
 	//add_thing(global.lvl15_things,objBlock,0,0);
 	//add_thing(global.lvl15_things,objBlock,1,0);
 
-	var xx = 4;
+	var xx = 7;
 	var yy = 2;
 	var ww = 7;
 	var hh = 4;
@@ -302,7 +302,7 @@ function make_levels() {
 	add_thing(global.lvl16_things,objBlock,2,1, choose(0,1,2,3));
 	add_thing(global.lvl16_things,objBlock,3,1, choose(0,1,2,3));
 
-	var xx = 16;
+	var xx = 17;
 	var yy = 6;
 	var ww = 5;
 	var hh = 3;
@@ -315,7 +315,7 @@ function make_levels() {
 	
 	add_thing(global.lvl17_things,objFolder,3,0,[0,10,10,3]);
 
-	var xx = 4;
+	var xx = 19;
 	var yy = 8;
 	var ww = 5;
 	var hh = 4;
@@ -331,8 +331,8 @@ function make_levels() {
 	add_thing(global.lvl18_things,objPowerup,1,3);
 	add_thing(global.lvl18_things,objBlock,2,0,choose(0,1,2,3));	
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 1;
+	var yy = 5;
 	var ww = 5;
 	var hh = 4;
 
@@ -349,8 +349,8 @@ function make_levels() {
 	add_thing(global.lvl19_things,objBlock,2,2,choose(0,1,2,3));
 	add_thing(global.lvl19_things,objBlock,4,4,choose(0,1,2,3));
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 16;
+	var yy = 6;
 	var ww = 5;
 	var hh = 5;
 
@@ -394,10 +394,10 @@ function make_levels() {
 	add_thing(global.lvl21_things,objBlock,4,2,choose(0,1,2,3));
 	add_thing(global.lvl21_things,objBlock,2,0,choose(0,1,2,3));
 	add_thing(global.lvl21_things,objBlock,2,2,choose(0,1,2,3));
-	add_thing(global.lvl21_things,objPowerup,4,0);
+	add_thing(global.lvl21_things,objPowerup,3,1);
 	
-	var xx = 9;
-	var yy = 2;
+	var xx = 5;
+	var yy = 7;
 	var ww = 7;
 	var hh = 4;
 
@@ -441,8 +441,8 @@ function make_levels() {
 	add_thing(global.lvl23_things,objBlock,5,1,choose(0,1,2,3));
 	add_thing(global.lvl23_things,objBlock,6,0,choose(0,1,2,3));
 	
-	var xx = 4;
-	var yy = 8;
+	var xx = 3;
+	var yy = 7;
 	var ww = 8;
 	var hh = 4;
 
@@ -456,8 +456,8 @@ function make_levels() {
 	add_thing(global.lvl24_things,objKey,2,1,[0,0]);
 	add_thing(global.lvl24_things,objFolder,4,1,[2,20,6,4]);
 
-	var xx = 4;
-	var yy = 8;
+	var xx = 16;
+	var yy = 1;
 	var ww = 5;
 	var hh = 3;
 
@@ -519,8 +519,8 @@ function make_levels() {
 	add_thing(global.lvl27_things,objKey,2,1,[0,1]);
 	add_thing(global.lvl27_things,objFolder,0,1,[2,20,6,4]);
 	
-	var xx = 4;
-	var yy = 8;
+	var xx = 5;
+	var yy = 4;
 	var ww = 5;
 	var hh = 3;
 
