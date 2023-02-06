@@ -1,4 +1,4 @@
-window_draw_img();
+if (PLAYING) { window_draw_img(); }
 
 if (global.debug) {
 	// -- GRID
@@ -19,11 +19,13 @@ if (global.debug) {
 	draw_set_color(c_white);
 	
 	// -- GLOBALS
-	draw_set_color(c_black);
-	draw_text(0,0,"Turn: "+string(TU));
-	draw_text(0,16,"Turn timer: "+string(TUTIMER));
-	draw_text(0,32,"Steps: "+string(global.steps));
-	draw_text(0,room_height-16,"Level: "+string(LVLACTIVE));
+	if (PLAYING) {
+		draw_set_color(c_black);
+		draw_text(0,0,"Turn: "+string(TU));
+		draw_text(0,16,"Turn timer: "+string(TUTIMER));
+		draw_text(0,32,"Steps: "+string(global.steps));
+		draw_text(0,room_height-16,"Level: "+string(LVLACTIVE));
 	
-	draw_text(0,room_height-32,string(global.lvl_bg[0])+","+string(global.lvl_bg[1])+","+string(global.lvl_bg[2]));
+		draw_text(0,room_height-32,string(global.lvl_bg[0])+","+string(global.lvl_bg[1])+","+string(global.lvl_bg[2]));
+	}
 }
