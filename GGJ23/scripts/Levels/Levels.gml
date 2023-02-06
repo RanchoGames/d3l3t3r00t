@@ -50,7 +50,7 @@ function make_levels() {
 	
 	add_thing(global.lvl1_things,objFolder,1,1,[2,0,2,1]);	
 	add_thing(global.lvl1_things,objBlock,1,3,choose(0,1,2,3));
-	add_thing(global.lvl1_things,objFolder,3,2,[choose(3,3,4,5,6,7),2,0,7]);
+	add_thing(global.lvl1_things,objFolder,3,2,[0,2,0,7]);
 	
 	var xx = 6;
 	var yy = 3;
@@ -64,8 +64,8 @@ function make_levels() {
 	// -- Level 2
 	global.lvl2_things = ds_map_create();
 	
-	add_thing(global.lvl2_things,objFolder,0,7,[0,1,3,2]);	
-	add_thing(global.lvl2_things,objFolder,1,1,[choose(3,3,4,5,6,7),3,1,1]);
+	add_thing(global.lvl2_things,objFolder,0,7,[choose(3,3,4,5,6,7),1,3,2]);	
+	add_thing(global.lvl2_things,objFolder,1,1,[0,3,1,1]);
 	
 	var xx = 13;
 	var yy = 2;
@@ -78,12 +78,14 @@ function make_levels() {
 	// -- Level 3
 	global.lvl3_things = ds_map_create();
 	
-	add_thing(global.lvl3_things,objFolder,1,1,[0,2,1,1]);	
-	add_thing(global.lvl3_things,objFolder,3,0,[choose(3,3,4,5,6,7),20  ,1,1]);
+	add_thing(global.lvl3_things,objFolder,1,1,[choose(3,3,4,5,6,7),2,1,1]);	
+	add_thing(global.lvl3_things,objFolder,3,0,[0,20,1,1]);
 	add_thing(global.lvl3_things,objFolder,4,2,[choose(3,3,4,5,6,7),5,4,3]);
 	add_thing(global.lvl3_things,objFolder,2,3,[choose(3,3,4,5,6,7),4,1,1]);
-	add_thing(global.lvl3_things,objBlock,0,2,choose(0,1,2,3));
-	add_thing(global.lvl3_things,objBlock,3,1,choose(0,1,2,3));
+	add_thing(global.lvl3_things,objTXT,0,2,[sprImg_Chiquito,4,5,1,"jorl-condemor.jpg"]);
+	add_thing(global.lvl3_things,objTXT,3,1,[sprImg_Torroles,18,5,1,"eNn-toRRoles.png"]);
+	//add_thing(global.lvl3_things,objBlock,0,2,choose(0,1,2,3));
+	//add_thing(global.lvl3_things,objBlock,3,1,choose(0,1,2,3));
 	
 	var xx = 12;
 	var yy = 5;
@@ -115,10 +117,10 @@ function make_levels() {
 	
 	add_thing(global.lvl5_things,objFolder,4,3,[0,3,4,2]);
 	add_thing(global.lvl5_things,objFolder,2,1,[choose(3,3,4,5,6,7),6,0,0]);
-	add_thing(global.lvl5_things,objBlock,0,3,choose(0,1,2,3));
-	add_thing(global.lvl5_things,objBlock,3,0,choose(0,1,2,3));
+	add_thing(global.lvl5_things,objTXT,0,3,[sprImg_Goblin1,4,8,1,"goblin_mando_1.jpg"]);
+	add_thing(global.lvl5_things,objTXT,3,0,[sprImg_Goblin2,7,6,1,"culito_goblin.jpg"]);
 
-	var xx = 2;
+	var xx = 1;
 	var yy = 5;
 	var ww = 5;
 	var hh = 4;
@@ -285,7 +287,7 @@ function make_levels() {
 	// -- Level 16
 	global.lvl16_things = ds_map_create();
 	
-	add_thing(global.lvl16_things,objFolder,2,2,[choose(3,3,4,5,6,7),11,2,3]);
+	add_thing(global.lvl16_things,objFolder,2,2,[0,11,2,3]);
 	add_thing(global.lvl16_things,objFolder,3,0,[11,17,1,3]);
 	add_thing(global.lvl16_things,objBlock,1,1, choose(0,1,2,3));
 	add_thing(global.lvl16_things,objBlock,2,1, choose(0,1,2,3));
@@ -351,8 +353,8 @@ function make_levels() {
 	
 	add_thing(global.lvl20_things,objFolder,1,1,[choose(3,3,4,5,6,7),3,3,0]);
 	add_thing(global.lvl20_things,objFolder,6,5,[choose(3,3,4,5,6,7),19,4,1]);
-	add_thing(global.lvl20_things,objFolder,4,6,[1,21,5,2]);
-	add_thing(global.lvl20_things,objFolder,8,6,[1,25,1,2]);
+	add_thing(global.lvl20_things,objFolder,4,6,[17,21,5,2]);
+	add_thing(global.lvl20_things,objFolder,8,6,[19,25,1,2]);
 	add_thing(global.lvl20_things,objC,6,0);
 	add_thing(global.lvl20_things,objDoor,6,1,[0,0]);
 	add_thing(global.lvl20_things,objDoor,6,2,[0,1]);	
@@ -396,7 +398,7 @@ function make_levels() {
 	// -- Level 22
 	global.lvl22_things = ds_map_create();
 	
-	add_thing(global.lvl22_things,objFolder,0,2,[choose(3,3,4,5,6,7),21,0,1]);
+	add_thing(global.lvl22_things,objFolder,0,2,[16,21,0,1]);
 	add_thing(global.lvl22_things,objFolder,0,4,[0,23,3,3]);
 	add_thing(global.lvl22_things,objPowerup,2,0);
 	add_thing(global.lvl22_things,objPowerup,2,4);
