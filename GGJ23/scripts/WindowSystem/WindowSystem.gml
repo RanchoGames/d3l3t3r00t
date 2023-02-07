@@ -260,13 +260,14 @@ function window_update_background() {
 □━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
 */
 
-function window_add_img(iid,image,x1,y1,title) {
+function window_add_img(iid,image,image_frame,x1,y1,title) {
 	var struct = {
 		iid : iid,
 		image : image,
+		image_frame : image_frame,
 		x1 : x1,
 		y1 : y1,
-		title : title
+		title : title,
 	}
 	
 	IMG[? iid] = struct;
@@ -298,14 +299,20 @@ function window_draw_img() {
 				if (instance_exists(tid)) {
 					//if (nid.showing) {
 						var image	= metadata.image;
+						var image_frame	= (metadata.image_frame == undefined ? 0 : metadata.image_frame);
 						var image_x	= metadata.x1;
 						var image_y	= metadata.y1;
 						var image_w = sprite_get_width(image);
 						var image_h = sprite_get_height(image);
 						var image_title = metadata.title;
-			
+						
+						var ss = image_frame + sprite_get_speed(image);
+						var ff = floor(ss mod sprite_get_number(image));
+						
 						draw_window(image_x,image_y,image_x+(image_w/GRID_SIZE),image_y+(image_h/GRID_SIZE),1,image_title);
-						draw_sprite(image,0,image_x*GRID_SIZE,image_y*GRID_SIZE);
+						draw_sprite(image,ff,image_x*GRID_SIZE,image_y*GRID_SIZE);
+						
+						window_add_img(nid,image,ss,image_x,image_y,image_title);
 					//}
 				}
 			}

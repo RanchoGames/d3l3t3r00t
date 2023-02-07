@@ -125,15 +125,17 @@ function level_get_levels() {
 	return ds_map_size(LVL);
 }
 
-
 /*
-□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
-- START LEVEL
-□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+
+- Musica
+Reproduce la musica del nivel
+
+─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
 */
 
-function level_start(level) {
-	// - Musica
+function level_musica(level) {
+
 	if (LVLACTIVE>0 && LVLACTIVE<=6) {
 		if (is_musica(sndMusic1)==0) {
 			sonar_musica(sndMusic1);
@@ -190,6 +192,18 @@ function level_start(level) {
 			audio_sound_gain(sndMusic2,0,2000);
 		}
 	}
+}
+
+/*
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+- START LEVEL
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+*/
+
+function level_start(level) {
+	
+	// - Musica
+	level_musica(level);
 	
 	// - Movement
 	STKEYS = 0;
@@ -238,6 +252,16 @@ function level_start(level) {
 					new_obj.img_y	= piece.data[2];
 					new_obj.tipo	= piece.data[3];
 					new_obj.title	= piece.data[4];
+				break;
+				
+				// - Music
+				case objMusic:
+					new_obj.image	= piece.data[0];
+					new_obj.img_x	= piece.data[1];
+					new_obj.img_y	= piece.data[2];
+					new_obj.tipo	= piece.data[3];
+					new_obj.title	= piece.data[4];
+					new_obj.music	= piece.data[5];
 				break;
 				
 				// - Door

@@ -99,7 +99,7 @@ function make_levels() {
 	global.lvl4_things = ds_map_create();
 	
 	add_thing(global.lvl4_things,objFolder,1,1,[0,3,2,3]);
-	add_thing(global.lvl4_things,objBlock,0,2,choose(0,1,2,3));
+	add_thing(global.lvl4_things,objTXT,0,2,[sprImg_Toot,4,2,1,"toot.guf"]);
 	add_thing(global.lvl4_things,objBlock,1,3,choose(0,1,2,3));
 	add_thing(global.lvl4_things,objBlock,3,1,choose(0,1,2,3));
 	add_thing(global.lvl4_things,objBlock,3,3,choose(0,1,2,3));
