@@ -54,7 +54,7 @@ global.sonido = 1;
 
 function turn_next(){
 	var myturn = (TU==0 ? 1 : 0);
-	if (myturn && LVLACTIVE>=global.lvl_antivirus) { ST--; }
+	if (myturn && LVLACTIVE>=global.lvl_antivirus && LVLACTIVE!=20) { ST--; }
 	
 	TU++;
 	TUTIMER = TUTIMERTOTAL;

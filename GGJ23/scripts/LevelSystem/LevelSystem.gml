@@ -134,11 +134,22 @@ function level_get_levels() {
 
 function level_start(level) {
 	// - Musica
-	if (LVLACTIVE>0) {
+	if (LVLACTIVE>0 && LVLACTIVE<=6) {
 		if (is_musica(sndMusic1)==0) {
 			sonar_musica(sndMusic1);
 			audio_sound_gain(sndMusic1,0,0);
 			audio_sound_gain(sndMusic1,.6,3000);
+		}
+		else {
+			audio_sound_gain(sndMusic1,.6,3000);
+		}
+		
+		if (is_musica(sndMusic2)) {
+			audio_sound_gain(sndMusic2,0,2000);
+		}
+		
+		if (is_musica(sndAmbient)) {
+			audio_sound_gain(sndAmbient,0,2000);
 		}
 	}
 	
@@ -148,9 +159,35 @@ function level_start(level) {
 			audio_sound_gain(sndMusic2,0,0);
 			audio_sound_gain(sndMusic2,.5,4000);
 		}
+		else {
+			audio_sound_gain(sndMusic2,.5,4000);
+		}
 		
 		if (is_musica(sndMusic1)) {
 			audio_sound_gain(sndMusic1,0,2000);
+		}
+		
+		if (is_musica(sndAmbient)) {
+			audio_sound_gain(sndAmbient,0,2000);
+		}
+	}
+	
+	if (LVLACTIVE==20) {
+		if (is_musica(sndAmbient)==0) {
+			sonar_musica(sndAmbient);
+			audio_sound_gain(sndAmbient,0,0);
+			audio_sound_gain(sndAmbient,.5,4000);
+		}
+		else {
+			audio_sound_gain(sndAmbient,.5,4000);
+		}
+		
+		if (is_musica(sndMusic1)) {
+			audio_sound_gain(sndMusic1,0,2000);
+		}
+		
+		if (is_musica(sndMusic2)) {
+			audio_sound_gain(sndMusic2,0,2000);
 		}
 	}
 	
