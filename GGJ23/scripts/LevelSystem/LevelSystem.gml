@@ -259,9 +259,8 @@ function level_start(level) {
 					new_obj.image	= piece.data[0];
 					new_obj.img_x	= piece.data[1];
 					new_obj.img_y	= piece.data[2];
-					new_obj.tipo	= piece.data[3];
-					new_obj.title	= piece.data[4];
-					new_obj.music	= piece.data[5];
+					new_obj.title	= piece.data[3];
+					new_obj.music	= piece.data[4];
 				break;
 				
 				// - Door

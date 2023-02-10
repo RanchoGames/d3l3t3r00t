@@ -35,6 +35,7 @@ function make_levels() {
 	add_thing(global.lvl0_things,objFolder,2,1,[0,1,1,1]);
 	add_thing(global.lvl0_things,objTXT,2,0,[sprImg_controls,6,3,0,"controls.txt"]);
 	add_thing(global.lvl0_things,objTXT,0,2,[sprImg_credits,6,3,0,"credits.txt"]);
+	add_thing(global.lvl0_things,objMusic,0,1,[sprImg_WMP,6,2,"pajarito-2.mp3", ostPajarito]);
 	
 	var xx = 2;
 	var yy = 2;
@@ -305,6 +306,7 @@ function make_levels() {
 	global.lvl17_things = ds_map_create();
 	
 	add_thing(global.lvl17_things,objFolder,3,0,[0,10,10,3]);
+	add_thing(global.lvl17_things,objMusic,0,2,[sprImg_WMP,4,2,"pajarito-2.mp3", ostPajarito]);
 
 	var xx = 19;
 	var yy = 8;
