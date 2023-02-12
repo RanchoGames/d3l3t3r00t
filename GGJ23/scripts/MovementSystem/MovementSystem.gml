@@ -201,8 +201,7 @@ function character_interaction() {
 function is_player_playing() {
 	var ju = false;
 	
-	ju = ((KUP or KDOWN or KLEFT or KRIGHT or KINTERACT) ? true : false);
-	ju = ((keyboard_check_pressed(vk_anykey) or mouse_check_button_pressed(mb_any)) ? true : false);
+	ju = ((KUP or KDOWN or KLEFT or KRIGHT or KINTERACT or keyboard_check_pressed(vk_anykey) or mouse_check_button_pressed(mb_any)) ? true : false);
 	
 	return ju;
 } 

@@ -9,9 +9,8 @@ if (PLAYING) {
 	}
 	
 	// -- Check screensaver timer	
-	global.screensaver_timer = (is_player_playing() ? 0 : global.screensaver_timer+1);
+	global.screensaver_timer = ((is_player_playing() or is_musica(global.music_player)) ? 0 : global.screensaver_timer+sprite_get_speed(sprScreensaver));
 	
-
 	// -- Restart with gamepad
 	if (gamepad_button_check(0,gp_start)) {
 		if (gamepad_button_check_pressed(0,gp_face1)) {

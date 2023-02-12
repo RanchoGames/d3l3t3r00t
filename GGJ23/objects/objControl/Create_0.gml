@@ -13,4 +13,3 @@ level_start(0);
 global.already_played = 1;
 
 global.music_player = noone;
-#macro MUSIC_PLAYER global.music_player
