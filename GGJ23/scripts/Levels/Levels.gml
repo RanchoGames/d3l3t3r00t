@@ -305,6 +305,12 @@ function make_levels() {
 	global.lvl17_things = ds_map_create();
 	
 	add_thing(global.lvl17_things,objFolder,3,0,[0,10,10,3]);
+	add_thing(global.lvl17_things,objMusic,0,0,[sprImg_WMP,11,5,"paj_arit0.mp3", ostPajarito]);
+	add_thing(global.lvl17_things,objMusic,3,3,[sprImg_WMP,11,7,"heavens-a-Bob.mp3", ostCannonBob]);
+	add_thing(global.lvl17_things,objMusic,2,1,[sprImg_WMP,11,5,"cuackcuacuack.mp3", ostPlugLife]);
+	add_thing(global.lvl17_things,objMusic,4,2,[sprImg_WMP,11,6,"enjoy_the_.wav", ostSpaceSummer]);
+	add_thing(global.lvl17_things,objBlock,4,0,3);
+	add_thing(global.lvl17_things,objBlock,0,2,3);
 
 	var xx = 19;
 	var yy = 8;

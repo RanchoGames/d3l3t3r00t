@@ -260,7 +260,7 @@ function window_update_background() {
 □━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
 */
 
-function window_add_img(iid,image,image_frame,x1,y1,title) {
+function window_add_img(iid,image,image_frame,x1,y1,title,file_format) {
 	var struct = {
 		iid : iid,
 		image : image,
@@ -268,6 +268,7 @@ function window_add_img(iid,image,image_frame,x1,y1,title) {
 		x1 : x1,
 		y1 : y1,
 		title : title,
+		file_format : file_format,
 	}
 	
 	IMG[? iid] = struct;
@@ -287,6 +288,20 @@ function window_img_find(bid) {
 	return returnid;
 }
 
+function music_repro_rate(bid) {
+	var returnpercetange = noone;
+	
+	with (objTXT)
+	{
+		if (miid==bid)
+		{
+			returnpercetange = (is_musica(global.music_player) ? (audio_sound_get_track_position(global.music_player) / audio_sound_length(global.music_player)) : 1);			
+		}
+	}
+	
+	return returnpercetange;
+}
+
 function window_draw_img() {
 	var total_img = window_total_imgs();
 	if (total_img>0) {
@@ -300,19 +315,39 @@ function window_draw_img() {
 					//if (nid.showing) {
 						var image	= metadata.image;
 						var image_frame	= (metadata.image_frame == undefined ? 0 : metadata.image_frame);
+						var image_format = metadata.file_format; // Either a file or music
 						var image_x	= metadata.x1;
 						var image_y	= metadata.y1;
 						var image_w = sprite_get_width(image);
-						var image_h = sprite_get_height(image);
+						var image_h = (image_format == "music" ? sprite_get_height(image) + sprite_get_height(sprMusicControler) : sprite_get_height(image));
 						var image_title = metadata.title;
 						
 						var ss = image_frame + sprite_get_speed(image);
 						var ff = floor(ss mod sprite_get_number(image));
 						
+						// - Stop animation in case music file has stopped
+						if image_format == "music"
+						{
+							var reprorate = music_repro_rate(nid);
+							ff = (reprorate>0.95 ? 0 : ff);
+						}
+						
+						// - Draw window + sprite
 						draw_window(image_x,image_y,image_x+(image_w/GRID_SIZE),image_y+(image_h/GRID_SIZE),1,image_title);
 						draw_sprite(image,ff,image_x*GRID_SIZE,image_y*GRID_SIZE);
 						
-						window_add_img(nid,image,ss,image_x,image_y,image_title);
+						// - Draw player
+						if image_format == "music"
+						{
+							var reprorate = music_repro_rate(nid);
+							var ww = reprorate * ((sprite_get_width(sprMusicControler)-GRID_SIZE+5)/GRID_SIZE);
+							var hh = (image_h/GRID_SIZE);
+							var hhh = hh - sprite_get_height(sprMusicControler)/GRID_SIZE;
+							draw_sprite(sprMusicControler, 0, image_x*GRID_SIZE, (image_y+hh)*GRID_SIZE);
+							draw_sprite(sprMusicHandle, 0, (image_x+ww)*GRID_SIZE, (image_y+hhh)*GRID_SIZE);
+						}
+						
+						window_add_img(nid,image,ss,image_x,image_y,image_title,image_format);
 					//}
 				}
 			}

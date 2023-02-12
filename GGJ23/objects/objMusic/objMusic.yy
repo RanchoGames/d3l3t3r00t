@@ -13,7 +13,10 @@
     "name": "Things",
     "path": "folders/Objects/Things.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objTXT",
+    "path": "objects/objTXT/objTXT.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
