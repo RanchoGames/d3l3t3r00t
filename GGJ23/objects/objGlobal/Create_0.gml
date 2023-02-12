@@ -20,6 +20,9 @@ global.ended_timer_total = 120;
 global.ended_timer = global.ended_timer_total;
 #macro ENDED global.ended
 
+global.screensaver = 0;
+global.screensaver_timer = 0;
+
 global.playing = 0;
 #macro PLAYING global.playing
 

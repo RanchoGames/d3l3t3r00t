@@ -7,6 +7,10 @@ if (PLAYING) {
 			restart_everything();
 		}
 	}
+	
+	// -- Check screensaver timer	
+	global.screensaver_timer = (is_player_playing() ? 0 : global.screensaver_timer+1);
+	
 
 	// -- Restart with gamepad
 	if (gamepad_button_check(0,gp_start)) {
