@@ -444,13 +444,13 @@ function make_levels() {
 	add_thing(global.lvl23_things,objFolder,0,0,[0,9,3,4]);
 	add_thing(global.lvl23_things,objFolder,3,3,[3,22,0,4]);
 	add_thing(global.lvl23_things,objFolder,6,2,[3,24,0,1]);
-	add_thing(global.lvl23_things,objBlock,1,3,choose(1,2));
+	add_thing(global.lvl23_things,objBlock,1,3,1);
 	add_thing(global.lvl23_things,objBlock,2,2,choose(1,2));
-	add_thing(global.lvl23_things,objBlock,3,1,choose(1,2));
+	add_thing(global.lvl23_things,objBlock,3,1,1);
 	add_thing(global.lvl23_things,objBlock,4,2,choose(1,2));
-	add_thing(global.lvl23_things,objBlock,5,0,choose(1,2));
+	add_thing(global.lvl23_things,objBlock,5,0,1);
 	add_thing(global.lvl23_things,objBlock,5,1,choose(1,2));
-	add_thing(global.lvl23_things,objBlock,6,0,choose(1,2));
+	add_thing(global.lvl23_things,objBlock,6,0,choose(1,1,2));
 	
 	var xx = 4;
 	var yy = 8;
@@ -490,7 +490,7 @@ function make_levels() {
 	var ww = 2;
 	var hh = 8;
 
-	add_level(25,"Untitled", xx, yy, xx+ww, yy+hh, global.lvl25_things);
+	add_level(25,"Archive", xx, yy, xx+ww, yy+hh, global.lvl25_things);
 	// -- End Level 25
 	
 	// -- Level 26

@@ -103,7 +103,6 @@
     {"name":"sprImg_Pipo","order":19,"path":"sprites/sprImg_Pipo/sprImg_Pipo.yy",},
     {"name":"sprScreensaver","order":28,"path":"sprites/sprScreensaver/sprScreensaver.yy",},
     {"name":"sprImg_controls","order":2,"path":"sprites/sprImg_controls/sprImg_controls.yy",},
-    {"name":"sprComic","order":22,"path":"sprites/sprComic/sprComic.yy",},
     {"name":"sndIntro2","order":1,"path":"sounds/sndIntro2/sndIntro2.yy",},
     {"name":"sprTXT","order":6,"path":"sprites/sprTXT/sprTXT.yy",},
     {"name":"sprC","order":20,"path":"sprites/sprC/sprC.yy",},
