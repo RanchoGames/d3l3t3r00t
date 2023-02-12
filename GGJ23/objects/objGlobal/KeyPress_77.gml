@@ -1,0 +1,1 @@
+global.sonido = (global.sonido ? 0 : 1);

@@ -1,7 +1,9 @@
 function sonar(snd) {
+	var sound_id = noone;
 	if (global.sonido) {
-		audio_play_sound(snd,0,0);
+		sound_id = audio_play_sound(snd,0,0);
 	}
+	return sound_id;
 }
 
 function sonar_musica(snd) {

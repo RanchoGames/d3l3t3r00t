@@ -1,0 +1,1 @@
+global.playing = (room==rmJuego ? 1 : 0);

@@ -125,20 +125,33 @@ function level_get_levels() {
 	return ds_map_size(LVL);
 }
 
-
 /*
-□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
-- START LEVEL
-□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+
+- Musica
+Reproduce la musica del nivel
+
+─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
 */
 
-function level_start(level) {
-	// - Musica
-	if (LVLACTIVE>0) {
+function level_musica(level) {
+
+	if (LVLACTIVE>0 && LVLACTIVE<=6) {
 		if (is_musica(sndMusic1)==0) {
 			sonar_musica(sndMusic1);
 			audio_sound_gain(sndMusic1,0,0);
 			audio_sound_gain(sndMusic1,.6,3000);
+		}
+		else {
+			audio_sound_gain(sndMusic1,.6,3000);
+		}
+		
+		if (is_musica(sndMusic2)) {
+			audio_sound_gain(sndMusic2,0,2000);
+		}
+		
+		if (is_musica(sndAmbient)) {
+			audio_sound_gain(sndAmbient,0,2000);
 		}
 	}
 	
@@ -148,18 +161,24 @@ function level_start(level) {
 			audio_sound_gain(sndMusic2,0,0);
 			audio_sound_gain(sndMusic2,.5,4000);
 		}
+		else {
+			audio_sound_gain(sndMusic2,.5,4000);
+		}
 		
 		if (is_musica(sndMusic1)) {
 			audio_sound_gain(sndMusic1,0,2000);
 		}
+		
+		if (is_musica(sndAmbient)) {
+			audio_sound_gain(sndAmbient,0,2000);
+		}
 	}
 	
-<<<<<<< Updated upstream
-=======
 	if (LVLACTIVE==20) {
 		if (is_musica(sndAmbient)==0) {
 			sonar_musica(sndAmbient);
 			audio_sound_gain(sndAmbient,0,0);
+
 			audio_sound_gain(sndAmbient,.75,4000);
 		}
 		else {
@@ -187,7 +206,6 @@ function level_start(level) {
 	// - Musica
 	level_musica(level);
 	
->>>>>>> Stashed changes
 	// - Movement
 	STKEYS = 0;
 	
@@ -235,6 +253,15 @@ function level_start(level) {
 					new_obj.img_y	= piece.data[2];
 					new_obj.tipo	= piece.data[3];
 					new_obj.title	= piece.data[4];
+				break;
+				
+				// - Music
+				case objMusic:
+					new_obj.image	= piece.data[0];
+					new_obj.img_x	= piece.data[1];
+					new_obj.img_y	= piece.data[2];
+					new_obj.title	= piece.data[3];
+					new_obj.music	= piece.data[4];
 				break;
 				
 				// - Door

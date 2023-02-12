@@ -38,6 +38,13 @@ global.keys = 0;
 global.key[0] = 0;
 global.key[1] = 0;
 
+global.already_played = 0;
+
+global.is_html = (os_browser == browser_not_a_browser ? 0 : 1);
+#macro IS_HTML global.is_html
+
+global.sonido = 1;
+
 
 /*
 □━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
@@ -47,7 +54,7 @@ global.key[1] = 0;
 
 function turn_next(){
 	var myturn = (TU==0 ? 1 : 0);
-	if (myturn && LVLACTIVE>=global.lvl_antivirus) { ST--; }
+	if (myturn && LVLACTIVE>=global.lvl_antivirus && LVLACTIVE!=20) { ST--; }
 	
 	TU++;
 	TUTIMER = TUTIMERTOTAL;

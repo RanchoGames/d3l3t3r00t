@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndMusic2.wav",
+  "soundFile": "sndMusic2.ogg",
   "type": 0,
   "volume": 1.0,
 }

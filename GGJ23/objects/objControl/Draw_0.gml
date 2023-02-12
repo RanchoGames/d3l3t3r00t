@@ -5,7 +5,7 @@ if (global.fullscreen_update==0) {
 }
 
 // -- Draw antivirus
-if (LVLACTIVE >= global.lvl_antivirus) {
+if (LVLACTIVE >= global.lvl_antivirus && LVLACTIVE!=20) {
 	var antivirus_x = (room_width/2)-(240/2);
 	var antivirus_y = room_height-64-8;
 

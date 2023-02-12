@@ -3,7 +3,7 @@ if (showing==0) {
 		if (place_meeting(x,y,objCharacter) && TUTIMER==0) {
 			var mid = window_total_imgs();
 			miid = mid;
-			window_add_img(mid,image,img_x,img_y,title);
+			window_add_img(mid,image,image_frame,img_x,img_y,title, file_format);
 			sonar(sndOpenTXT);
 			showing = 1;
 		}

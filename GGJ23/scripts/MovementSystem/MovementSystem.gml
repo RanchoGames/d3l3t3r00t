@@ -126,8 +126,8 @@ function character_moveset(goto_x,goto_y) {
 */
 
 function character_interaction() {
-	if (TU==0 && TUTIMER==0 && ENDED==0) {
-		if (KINTERACT) {
+	if (TU==0 && ENDED==0) {
+		if (KINTERACT && TUTIMER==0) {
 			// -- Folder
 			if (place_meeting(x,y,objFolder)) {				
 				var folder = instance_place(x,y,objFolder);
@@ -168,6 +168,14 @@ function character_interaction() {
 			}
 		}
 		
+		// -- End
+		if (place_meeting(x,y,objC)) {
+			audio_stop_all();
+			//audio_play_sound(sndGlitch,0,1);
+			sonar_musica(sndGlitch);
+			audio_sound_gain(sndGlitch,0.3,0);
+			ENDED = 1;
+		}
 		
 		// -- Powerup
 		if (place_meeting(x,y,objPowerup)) {
@@ -180,14 +188,6 @@ function character_interaction() {
 					with (powerHold) { activated = 0; }
 				}
 			}
-		}
-		
-		// -- End
-		if (place_meeting(x,y,objC)) {
-			audio_stop_all();
-			audio_play_sound(sndGlitch,0,1);
-			audio_sound_gain(sndGlitch,0.3,0);
-			ENDED = 1;
 		}
 	}
 }
