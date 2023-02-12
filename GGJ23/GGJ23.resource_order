@@ -14,12 +14,23 @@
   ],
   "ResourceOrderSettings": [
     {"name":"objC","order":6,"path":"objects/objC/objC.yy",},
+<<<<<<< Updated upstream
     {"name":"sprBluescreen","order":22,"path":"sprites/sprBluescreen/sprBluescreen.yy",},
     {"name":"sprGlass","order":18,"path":"sprites/sprGlass/sprGlass.yy",},
+=======
+    {"name":"sprBluescreen","order":21,"path":"sprites/sprBluescreen/sprBluescreen.yy",},
+    {"name":"sprImg_Gafas","order":20,"path":"sprites/sprImg_Gafas/sprImg_Gafas.yy",},
+    {"name":"sprGlass","order":17,"path":"sprites/sprGlass/sprGlass.yy",},
+>>>>>>> Stashed changes
     {"name":"sprDoor","order":14,"path":"sprites/sprDoor/sprDoor.yy",},
     {"name":"objCharacter","order":2,"path":"objects/objCharacter/objCharacter.yy",},
     {"name":"sprWindowButtons","order":3,"path":"sprites/sprWindowButtons/sprWindowButtons.yy",},
     {"name":"sndPaso5","order":4,"path":"sounds/sndPaso5/sndPaso5.yy",},
+<<<<<<< Updated upstream
+=======
+    {"name":"sprImg_Goblin","order":18,"path":"sprites/sprImg_Goblin/sprImg_Goblin.yy",},
+    {"name":"sprImg_Chiquito","order":4,"path":"sprites/sprImg_Chiquito/sprImg_Chiquito.yy",},
+>>>>>>> Stashed changes
     {"name":"sndMuerte","order":6,"path":"sounds/sndMuerte/sndMuerte.yy",},
     {"name":"sprWindowButtonsBack","order":17,"path":"sprites/sprWindowButtonsBack/sprWindowButtonsBack.yy",},
     {"name":"sndCAbajo","order":14,"path":"sounds/sndCAbajo/sndCAbajo.yy",},
@@ -28,6 +39,7 @@
     {"name":"objPowerup","order":5,"path":"objects/objPowerup/objPowerup.yy",},
     {"name":"MovementSystem","order":2,"path":"scripts/MovementSystem/MovementSystem.yy",},
     {"name":"sndPaso2","order":1,"path":"sounds/sndPaso2/sndPaso2.yy",},
+    {"name":"sprImg_Kid","order":12,"path":"sprites/sprImg_Kid/sprImg_Kid.yy",},
     {"name":"sndCerrarTXT","order":11,"path":"sounds/sndCerrarTXT/sndCerrarTXT.yy",},
     {"name":"objControl","order":1,"path":"objects/objControl/objControl.yy",},
     {"name":"fntTitle","order":1,"path":"fonts/fntTitle/fntTitle.yy",},
@@ -36,17 +48,30 @@
     {"name":"sprWindow","order":2,"path":"sprites/sprWindow/sprWindow.yy",},
     {"name":"sndPaso3","order":2,"path":"sounds/sndPaso3/sndPaso3.yy",},
     {"name":"sprBlock","order":1,"path":"sprites/sprBlock/sprBlock.yy",},
+<<<<<<< Updated upstream
+=======
+    {"name":"sprImg_Stonks","order":14,"path":"sprites/sprImg_Stonks/sprImg_Stonks.yy",},
+    {"name":"sprIntro5","order":4,"path":"sprites/sprIntro5/sprIntro5.yy",},
+    {"name":"sprImg_credits","order":3,"path":"sprites/sprImg_credits/sprImg_credits.yy",},
+>>>>>>> Stashed changes
     {"name":"sndPaso4","order":3,"path":"sounds/sndPaso4/sndPaso4.yy",},
     {"name":"objTXT","order":2,"path":"objects/objTXT/objTXT.yy",},
     {"name":"sprPowerup","order":20,"path":"sprites/sprPowerup/sprPowerup.yy",},
     {"name":"sprFolder","order":4,"path":"sprites/sprFolder/sprFolder.yy",},
     {"name":"sndAmbient","order":13,"path":"sounds/sndAmbient/sndAmbient.yy",},
+<<<<<<< Updated upstream
+=======
+    {"name":"fntBoot","order":2,"path":"fonts/fntBoot/fntBoot.yy",},
+    {"name":"sprImg_Bill","order":11,"path":"sprites/sprImg_Bill/sprImg_Bill.yy",},
+    {"name":"sndIntro4","order":3,"path":"sounds/sndIntro4/sndIntro4.yy",},
+>>>>>>> Stashed changes
     {"name":"sprAntivirus_Bar","order":11,"path":"sprites/sprAntivirus_Bar/sprAntivirus_Bar.yy",},
     {"name":"SoundSystem","order":5,"path":"scripts/SoundSystem/SoundSystem.yy",},
     {"name":"sprBar","order":9,"path":"sprites/sprBar/sprBar.yy",},
     {"name":"sndMusic1","order":7,"path":"sounds/sndMusic1/sndMusic1.yy",},
     {"name":"sndCArribaDirecto","order":16,"path":"sounds/sndCArribaDirecto/sndCArribaDirecto.yy",},
     {"name":"sndPaso6","order":5,"path":"sounds/sndPaso6/sndPaso6.yy",},
+    {"name":"sprImg_mlgjam","order":13,"path":"sprites/sprImg_mlgjam/sprImg_mlgjam.yy",},
     {"name":"objDoor","order":4,"path":"objects/objDoor/objDoor.yy",},
     {"name":"sndMusic2","order":8,"path":"sounds/sndMusic2/sndMusic2.yy",},
     {"name":"sprAbira","order":19,"path":"sprites/sprAbira/sprAbira.yy",},
@@ -54,11 +79,33 @@
     {"name":"sprBackground","order":5,"path":"sprites/sprBackground/sprBackground.yy",},
     {"name":"sprAntivirus","order":10,"path":"sprites/sprAntivirus/sprAntivirus.yy",},
     {"name":"sndKey","order":12,"path":"sounds/sndKey/sndKey.yy",},
+<<<<<<< Updated upstream
     {"name":"sprKey","order":13,"path":"sprites/sprKey/sprKey.yy",},
     {"name":"sprWindowBack","order":16,"path":"sprites/sprWindowBack/sprWindowBack.yy",},
+=======
+    {"name":"sprImg_Tree","order":17,"path":"sprites/sprImg_Tree/sprImg_Tree.yy",},
+    {"name":"sprLogoBoot","order":23,"path":"sprites/sprLogoBoot/sprLogoBoot.yy",},
+    {"name":"sprIntro4","order":3,"path":"sprites/sprIntro4/sprIntro4.yy",},
+    {"name":"sprKey","order":13,"path":"sprites/sprKey/sprKey.yy",},
+    {"name":"sprWindowBack","order":15,"path":"sprites/sprWindowBack/sprWindowBack.yy",},
+    {"name":"sprImg_Apple","order":15,"path":"sprites/sprImg_Apple/sprImg_Apple.yy",},
+>>>>>>> Stashed changes
     {"name":"LevelSystem","order":3,"path":"scripts/LevelSystem/LevelSystem.yy",},
     {"name":"objFolder","order":1,"path":"objects/objFolder/objFolder.yy",},
+<<<<<<< Updated upstream
     {"name":"sprImg_Ted","order":1,"path":"sprites/sprImg_Ted/sprImg_Ted.yy",},
+=======
+    {"name":"sprImg_Toot","order":8,"path":"sprites/sprImg_Toot/sprImg_Toot.yy",},
+    {"name":"sprImg_sus","order":16,"path":"sprites/sprImg_sus/sprImg_sus.yy",},
+    {"name":"sprImg_Ted","order":1,"path":"sprites/sprImg_Ted/sprImg_Ted.yy",},
+    {"name":"sprImg_Goblin2","order":7,"path":"sprites/sprImg_Goblin2/sprImg_Goblin2.yy",},
+    {"name":"objComic","order":7,"path":"objects/objComic/objComic.yy",},
+    {"name":"sprImg_Pipo","order":19,"path":"sprites/sprImg_Pipo/sprImg_Pipo.yy",},
+    {"name":"sprScreensaver","order":28,"path":"sprites/sprScreensaver/sprScreensaver.yy",},
+    {"name":"sprImg_controls","order":2,"path":"sprites/sprImg_controls/sprImg_controls.yy",},
+    {"name":"sprComic","order":22,"path":"sprites/sprComic/sprComic.yy",},
+    {"name":"sndIntro2","order":1,"path":"sounds/sndIntro2/sndIntro2.yy",},
+>>>>>>> Stashed changes
     {"name":"sprTXT","order":6,"path":"sprites/sprTXT/sprTXT.yy",},
     {"name":"sprC","order":21,"path":"sprites/sprC/sprC.yy",},
     {"name":"sprClouds","order":12,"path":"sprites/sprClouds/sprClouds.yy",},

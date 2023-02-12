@@ -154,6 +154,40 @@ function level_start(level) {
 		}
 	}
 	
+<<<<<<< Updated upstream
+=======
+	if (LVLACTIVE==20) {
+		if (is_musica(sndAmbient)==0) {
+			sonar_musica(sndAmbient);
+			audio_sound_gain(sndAmbient,0,0);
+			audio_sound_gain(sndAmbient,.75,4000);
+		}
+		else {
+			audio_sound_gain(sndAmbient,.75,4000);
+		}
+		
+		if (is_musica(sndMusic1)) {
+			audio_sound_gain(sndMusic1,0,1000);
+		}
+		
+		if (is_musica(sndMusic2)) {
+			audio_sound_gain(sndMusic2,0,1000);
+		}
+	}
+}
+
+/*
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+- START LEVEL
+□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━□
+*/
+
+function level_start(level) {
+	
+	// - Musica
+	level_musica(level);
+	
+>>>>>>> Stashed changes
 	// - Movement
 	STKEYS = 0;
 	

@@ -32,11 +32,17 @@
   "resources": [
     {"id":{"name":"objC","path":"objects/objC/objC.yy",},"order":0,},
     {"id":{"name":"sprBluescreen","path":"sprites/sprBluescreen/sprBluescreen.yy",},"order":0,},
+    {"id":{"name":"sprImg_Gafas","path":"sprites/sprImg_Gafas/sprImg_Gafas.yy",},"order":0,},
     {"id":{"name":"sprGlass","path":"sprites/sprGlass/sprGlass.yy",},"order":0,},
     {"id":{"name":"sprDoor","path":"sprites/sprDoor/sprDoor.yy",},"order":0,},
     {"id":{"name":"objCharacter","path":"objects/objCharacter/objCharacter.yy",},"order":0,},
     {"id":{"name":"sprWindowButtons","path":"sprites/sprWindowButtons/sprWindowButtons.yy",},"order":0,},
     {"id":{"name":"sndPaso5","path":"sounds/sndPaso5/sndPaso5.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"sprImg_Goblin","path":"sprites/sprImg_Goblin/sprImg_Goblin.yy",},"order":0,},
+    {"id":{"name":"sprImg_Chiquito","path":"sprites/sprImg_Chiquito/sprImg_Chiquito.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"sndMuerte","path":"sounds/sndMuerte/sndMuerte.yy",},"order":0,},
     {"id":{"name":"sprWindowButtonsBack","path":"sprites/sprWindowButtonsBack/sprWindowButtonsBack.yy",},"order":0,},
     {"id":{"name":"sndCAbajo","path":"sounds/sndCAbajo/sndCAbajo.yy",},"order":0,},
@@ -46,6 +52,7 @@
     {"id":{"name":"sprCharacter","path":"sprites/sprCharacter/sprCharacter.yy",},"order":0,},
     {"id":{"name":"MovementSystem","path":"scripts/MovementSystem/MovementSystem.yy",},"order":0,},
     {"id":{"name":"sndPaso2","path":"sounds/sndPaso2/sndPaso2.yy",},"order":0,},
+    {"id":{"name":"sprImg_Kid","path":"sprites/sprImg_Kid/sprImg_Kid.yy",},"order":0,},
     {"id":{"name":"sndCerrarTXT","path":"sounds/sndCerrarTXT/sndCerrarTXT.yy",},"order":0,},
     {"id":{"name":"objControl","path":"objects/objControl/objControl.yy",},"order":0,},
     {"id":{"name":"fntTitle","path":"fonts/fntTitle/fntTitle.yy",},"order":0,},
@@ -55,6 +62,12 @@
     {"id":{"name":"sndPaso3","path":"sounds/sndPaso3/sndPaso3.yy",},"order":0,},
     {"id":{"name":"sprBlock","path":"sprites/sprBlock/sprBlock.yy",},"order":0,},
     {"id":{"name":"fntPixel","path":"fonts/fntPixel/fntPixel.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"sprImg_Stonks","path":"sprites/sprImg_Stonks/sprImg_Stonks.yy",},"order":0,},
+    {"id":{"name":"sprIntro5","path":"sprites/sprIntro5/sprIntro5.yy",},"order":0,},
+    {"id":{"name":"sprImg_credits","path":"sprites/sprImg_credits/sprImg_credits.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"sndPaso4","path":"sounds/sndPaso4/sndPaso4.yy",},"order":0,},
     {"id":{"name":"sndPaso1","path":"sounds/sndPaso1/sndPaso1.yy",},"order":0,},
     {"id":{"name":"objTXT","path":"objects/objTXT/objTXT.yy",},"order":0,},
@@ -63,6 +76,11 @@
     {"id":{"name":"objBlock","path":"objects/objBlock/objBlock.yy",},"order":0,},
     {"id":{"name":"sprFolder","path":"sprites/sprFolder/sprFolder.yy",},"order":0,},
     {"id":{"name":"sndAmbient","path":"sounds/sndAmbient/sndAmbient.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"fntBoot","path":"fonts/fntBoot/fntBoot.yy",},"order":0,},
+    {"id":{"name":"sprImg_Bill","path":"sprites/sprImg_Bill/sprImg_Bill.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"sprImg_Bob","path":"sprites/sprImg_Bob/sprImg_Bob.yy",},"order":0,},
     {"id":{"name":"sprAntivirus_Bar","path":"sprites/sprAntivirus_Bar/sprAntivirus_Bar.yy",},"order":0,},
     {"id":{"name":"SoundSystem","path":"scripts/SoundSystem/SoundSystem.yy",},"order":0,},
@@ -70,6 +88,7 @@
     {"id":{"name":"sndMusic1","path":"sounds/sndMusic1/sndMusic1.yy",},"order":0,},
     {"id":{"name":"sndCArribaDirecto","path":"sounds/sndCArribaDirecto/sndCArribaDirecto.yy",},"order":0,},
     {"id":{"name":"sndPaso6","path":"sounds/sndPaso6/sndPaso6.yy",},"order":0,},
+    {"id":{"name":"sprImg_mlgjam","path":"sprites/sprImg_mlgjam/sprImg_mlgjam.yy",},"order":0,},
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"order":0,},
     {"id":{"name":"sndMusic2","path":"sounds/sndMusic2/sndMusic2.yy",},"order":0,},
     {"id":{"name":"sprAbira","path":"sprites/sprAbira/sprAbira.yy",},"order":0,},
@@ -77,12 +96,33 @@
     {"id":{"name":"sprBackground","path":"sprites/sprBackground/sprBackground.yy",},"order":0,},
     {"id":{"name":"sprAntivirus","path":"sprites/sprAntivirus/sprAntivirus.yy",},"order":0,},
     {"id":{"name":"sndKey","path":"sounds/sndKey/sndKey.yy",},"order":0,},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"sprImg_Tree","path":"sprites/sprImg_Tree/sprImg_Tree.yy",},"order":0,},
+    {"id":{"name":"sprLogoBoot","path":"sprites/sprLogoBoot/sprLogoBoot.yy",},"order":0,},
+    {"id":{"name":"sprIntro4","path":"sprites/sprIntro4/sprIntro4.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"sprKey","path":"sprites/sprKey/sprKey.yy",},"order":0,},
     {"id":{"name":"sprWindowBack","path":"sprites/sprWindowBack/sprWindowBack.yy",},"order":0,},
+    {"id":{"name":"sprImg_Apple","path":"sprites/sprImg_Apple/sprImg_Apple.yy",},"order":0,},
     {"id":{"name":"LevelSystem","path":"scripts/LevelSystem/LevelSystem.yy",},"order":0,},
     {"id":{"name":"objFolder","path":"objects/objFolder/objFolder.yy",},"order":0,},
+<<<<<<< Updated upstream
     {"id":{"name":"sprImg_Ted","path":"sprites/sprImg_Ted/sprImg_Ted.yy",},"order":0,},
     {"id":{"name":"objGlobal","path":"objects/objGlobal/objGlobal.yy",},"order":0,},
+=======
+    {"id":{"name":"sprImg_Toot","path":"sprites/sprImg_Toot/sprImg_Toot.yy",},"order":0,},
+    {"id":{"name":"sprImg_sus","path":"sprites/sprImg_sus/sprImg_sus.yy",},"order":0,},
+    {"id":{"name":"sprImg_Ted","path":"sprites/sprImg_Ted/sprImg_Ted.yy",},"order":0,},
+    {"id":{"name":"sprImg_Goblin2","path":"sprites/sprImg_Goblin2/sprImg_Goblin2.yy",},"order":0,},
+    {"id":{"name":"objComic","path":"objects/objComic/objComic.yy",},"order":0,},
+    {"id":{"name":"sprImg_Pipo","path":"sprites/sprImg_Pipo/sprImg_Pipo.yy",},"order":0,},
+    {"id":{"name":"objGlobal","path":"objects/objGlobal/objGlobal.yy",},"order":0,},
+    {"id":{"name":"sprScreensaver","path":"sprites/sprScreensaver/sprScreensaver.yy",},"order":0,},
+    {"id":{"name":"sprImg_controls","path":"sprites/sprImg_controls/sprImg_controls.yy",},"order":0,},
+    {"id":{"name":"sprComic","path":"sprites/sprComic/sprComic.yy",},"order":0,},
+    {"id":{"name":"sprIntro1","path":"sprites/sprIntro1/sprIntro1.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"TurnSystem","path":"scripts/TurnSystem/TurnSystem.yy",},"order":0,},
     {"id":{"name":"sprTXT","path":"sprites/sprTXT/sprTXT.yy",},"order":0,},
     {"id":{"name":"sprC","path":"sprites/sprC/sprC.yy",},"order":0,},
