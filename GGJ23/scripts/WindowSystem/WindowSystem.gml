@@ -339,10 +339,8 @@ function window_draw_img() {
 						// - Draw player
 						if image_format == "music"
 						{
-							//show_debug_message(image_format);
 							var reprorate = music_repro_rate(nid);
 							var ww = reprorate * ((sprite_get_width(sprMusicControler)-GRID_SIZE+5)/GRID_SIZE);
-							show_debug_message(reprorate);
 							var hh = (image_h/GRID_SIZE);
 							var hhh = hh - sprite_get_height(sprMusicControler)/GRID_SIZE;
 							draw_sprite(sprMusicControler, 0, image_x*GRID_SIZE, (image_y+hh)*GRID_SIZE);
