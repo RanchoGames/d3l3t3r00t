@@ -178,18 +178,19 @@ function level_musica(level) {
 		if (is_musica(sndAmbient)==0) {
 			sonar_musica(sndAmbient);
 			audio_sound_gain(sndAmbient,0,0);
-			audio_sound_gain(sndAmbient,.5,4000);
+
+			audio_sound_gain(sndAmbient,.75,4000);
 		}
 		else {
-			audio_sound_gain(sndAmbient,.5,4000);
+			audio_sound_gain(sndAmbient,.75,4000);
 		}
 		
 		if (is_musica(sndMusic1)) {
-			audio_sound_gain(sndMusic1,0,2000);
+			audio_sound_gain(sndMusic1,0,1000);
 		}
 		
 		if (is_musica(sndMusic2)) {
-			audio_sound_gain(sndMusic2,0,2000);
+			audio_sound_gain(sndMusic2,0,1000);
 		}
 	}
 }
