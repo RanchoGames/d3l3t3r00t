@@ -23,7 +23,7 @@ if (PLAYING) {
 	draw_text_transformed((room_width-28)*WINDOW_SCALE,(room_height-15)*WINDOW_SCALE,time,2,2,0);
 	draw_set_font(fntPixel);
 
-	if (global.screensaver_timer > sprite_get_number(sprScreensaver)){
+	if (global.screensaver_timer > sprite_get_number(sprScreensaver)*4){
 		var ff = global.screensaver_timer mod sprite_get_number(sprScreensaver);
 		draw_sprite_ext(sprScreensaver,ff,0,0,WINDOW_SCALE,WINDOW_SCALE,0,c_white,1);
 	}
